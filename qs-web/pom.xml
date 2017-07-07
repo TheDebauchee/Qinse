@@ -23,8 +23,7 @@
 		<artifactId>qs-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>com.qs</groupId>
-	<version>0.0.1-SNAPSHOT</version>
+	
 	<dependencies>
 		<dependency>
 			<groupId>com.qs</groupId>

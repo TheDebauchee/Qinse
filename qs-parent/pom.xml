@@ -212,7 +212,7 @@
 		<dependency>
 			<groupId>org.wltea.analyzer</groupId>
 			<artifactId>ik-analyzer</artifactId>
-			<version>5.3.0</version>
+			<version>2012FF_u1</version>
 		</dependency>
 		
 		<!-- 爬虫jsoup -->

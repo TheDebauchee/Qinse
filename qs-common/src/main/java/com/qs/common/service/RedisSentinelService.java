@@ -32,7 +32,6 @@ public class RedisSentinelService {
   
     public void set(final String key, final String value) {  
         redisTemplate.execute(new RedisCallback<Object>() {  
-            @Override  
             public Object doInRedis(RedisConnection connection)  
                     throws DataAccessException {  
                 connection.set(  
@@ -46,7 +45,6 @@ public class RedisSentinelService {
     //设置值后并设置过期时间
     public void set(final String key, final String value, final long seconds) {  
     	redisTemplate.execute(new RedisCallback<Object>() {  
-    		@Override  
     		public Object doInRedis(RedisConnection connection)  
     				throws DataAccessException {  
     			connection.set(  
@@ -60,7 +58,6 @@ public class RedisSentinelService {
   
     public String get(final String key) {  
         return redisTemplate.execute(new RedisCallback<String>() {  
-            @Override  
             public String doInRedis(RedisConnection connection)  
                     throws DataAccessException {  
                 byte[] byteKye = redisTemplate.getStringSerializer().serialize(  
@@ -95,7 +92,6 @@ public class RedisSentinelService {
      */  
     public void mulitThreadSaveAndFind(final String keyvalue) {  
         executor.execute(new Runnable() {  
-            @Override  
             public void run() {  
                 try {  
                     set(keyvalue, keyvalue);  

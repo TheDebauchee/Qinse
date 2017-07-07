@@ -20,7 +20,6 @@ public class UserService {
 //		params.put("username", );
 		return null;
 		
-		return "";
 		
 	}
 	

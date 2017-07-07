@@ -41,7 +41,6 @@ public class RedisService {
     
     public String set(final String key, final String value) {
         return this.execute(new Function<ShardedJedis, String>() {
-            @Override
             public String execute(ShardedJedis shardedJedis) {
                 return shardedJedis.set(key, value);
             }
@@ -59,7 +58,6 @@ public class RedisService {
      */
     public String set(final String key, final String value, final Integer seconds) {
         return this.execute(new Function<ShardedJedis, String>() {
-            @Override
             public String execute(ShardedJedis shardedJedis) {
                 String result = shardedJedis.set(key, value);
                 shardedJedis.expire(key, seconds);//设置生存时间
@@ -77,7 +75,6 @@ public class RedisService {
      */
     public String get(final String key) {
         return this.execute(new Function<ShardedJedis, String>() {
-            @Override
             public String execute(ShardedJedis shardedJedis) {
                 return shardedJedis.get(key);
             }
@@ -94,7 +91,6 @@ public class RedisService {
      */
     public Long expire(final String key, final Integer seconds) {
         return this.execute(new Function<ShardedJedis, Long>() {
-            @Override
             public Long execute(ShardedJedis shardedJedis) {
                 return shardedJedis.expire(key, seconds);
             }
@@ -110,7 +106,6 @@ public class RedisService {
      */
     public Long del(final String key) {
         return this.execute(new Function<ShardedJedis, Long>() {
-            @Override
             public Long execute(ShardedJedis shardedJedis) {
                 return shardedJedis.del(key);
             }

@@ -25,6 +25,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="D:\qsns\Qinse\qs-web"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -35,14 +36,24 @@
 			<item value="[name]"/>
 		</list>
 	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.dialogs.MavenRepositorySearchDialog">
+		<item value="587" key="height"/>
+		<item value="480" key="width"/>
+		<item value="129" key="y"/>
+		<item value="720" key="x"/>
+	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="groupId">
 			<item value="com.qs"/>
 		</list>
 		<list key="package">
+			<item value="com.qs.qs_parent"/>
+			<item value="com.qs.qs_common"/>
 			<item value="com.qs.qs_web"/>
 		</list>
 		<list key="artifactId">
+			<item value="qs-parent"/>
+			<item value="qs-common"/>
 			<item value="qs-web"/>
 		</list>
 		<list key="projectNameTemplate">

@@ -19,7 +19,6 @@ public class Sim implements Comparable<Sim>{
 	public void setSimId(String simId) {
 		this.simId = simId;
 	}
-	@Override
 	public int compareTo(Sim s) {
 		if(this.simm>s.simm){
 			return -1;

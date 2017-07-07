@@ -1,2 +1,7 @@
 1499416842070	Delete element
 1499417036543	Delete element
+1499418495152	Rename package 'com.qs.mapper'
+1499418508650	Rename package 'com.qs.po'
+1499418523837	Rename package 'com.qs.service'
+1499418540669	Rename package 'com.qs.spring.exetend'
+1499418562564	Rename package 'com.qs.spring.exetend.jackson'

@@ -9,4 +9,9 @@ public class CupidService {
 		return null;
 	}
 
+	public User findUserCondById(String userId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

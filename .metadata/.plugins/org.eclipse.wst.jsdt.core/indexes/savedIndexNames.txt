@@ -1,0 +1,7 @@
+INDEX VERSION 1.3+D:\qsns\Qinse\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2628477141.index
+1874776249.index
+533542692.index
+3217395302.index
+797843434.index
+4078165123.index

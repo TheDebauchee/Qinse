@@ -18,6 +18,7 @@ public class UserService {
 		String url = "http://sso.qs.com/user/register";
 		Map<String,String> params = new HashMap<String,String>();
 //		params.put("username", );
+		return null;
 		
 		return "";
 		

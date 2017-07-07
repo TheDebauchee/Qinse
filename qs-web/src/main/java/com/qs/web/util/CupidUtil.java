@@ -27,7 +27,7 @@ public class CupidUtil {
 				e1=e1+mi;
 			}
 		}
-		Double mmm = 5/(5+Math.sqrt(e1));
+		Double mmm = (5/(5+Math.sqrt(e1)))/2+0.5;
 		return mmm;
 	}
 	/**

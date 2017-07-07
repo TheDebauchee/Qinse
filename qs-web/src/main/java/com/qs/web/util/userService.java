@@ -44,4 +44,14 @@ public class userService {
 		
 	}
 
+	public static Map<String, Double> findCourtLabel(String userId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public static User findUserById(String userId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

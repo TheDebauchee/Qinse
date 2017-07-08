@@ -57,6 +57,7 @@ public class UserService {
 		params.put("sDrink", spouse.getsDrink());
 		params.put("sSmoke", spouse.getsSmoke());
 		
+<<<<<<< HEAD
 		UserDetail detail = new UserDetail();
 		detail.setUserId(userId);
 		params.put("homeLoc", detail.getHomeLoc());
@@ -69,6 +70,8 @@ public class UserService {
 		params.put("gradFrom", detail.getGradFrom());
 		params.put("major", detail.getMajor());
 		params.put("selfDesc", detail.getSelfDesc());
+=======
+>>>>>>> 01d8a0bc4e64944ddc20e43e670f44581f0e7fe3
 		
 		UserLike userLike = new UserLike();
 		userLike.setUserId(userId);

@@ -13,13 +13,6 @@
   <packaging>war</packaging>
   <name>qs-manage-web Maven Webapp</name>
   <url>http://maven.apache.org</url>
-  <dependencies>
-    <dependency>
-    	<groupId>com.qs</groupId>
-    	<artifactId>qs-common</artifactId>
-    	<version>0.0.1-SNAPSHOT</version>
-    </dependency>
-  </dependencies>
  <build>
 	<plugins>
 		<plugin>
@@ -33,4 +26,11 @@
 		</plugin>
 	</plugins>
 </build>
+ <dependencies>
+ 	<dependency>
+ 		<groupId>com.qs</groupId>
+ 		<artifactId>qs-manage-service</artifactId>
+ 		<version>0.0.1-SNAPSHOT</version>
+ 	</dependency>
+ </dependencies>
 </project>

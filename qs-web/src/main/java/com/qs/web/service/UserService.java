@@ -12,16 +12,14 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.qs.common.service.HttpClientService;
 import com.qs.web.pojo.Spouse;
 import com.qs.web.pojo.User;
-<<<<<<< HEAD
 import com.qs.web.pojo.UserLabel;
-=======
 import com.qs.web.pojo.UserDetail;
 import com.qs.web.pojo.UserInfo;
 import com.qs.web.pojo.UserLike;
 import com.qs.web.pojo.UserPhoto;
 import com.qs.web.pojo.UserStatus;
 import com.qs.web.pojo.Uservalues;
->>>>>>> c419c745e89b5ec580965b6acab4dd6b2b97d548
+
 
 public class UserService {
 	@Autowired

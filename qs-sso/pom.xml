@@ -5,6 +5,19 @@
   <packaging>war</packaging>
   <name>qs-sso Maven Webapp</name>
   <url>http://maven.apache.org</url>
+  <dependencies>
+  <dependency>
+  	<groupId>com.qs</groupId>
+  	<artifactId>qs-common</artifactId>
+  	<version>0.0.1-SNAPSHOT</version>
+  </dependency>
+  </dependencies>
+  
+  <parent>
+  	<groupId>com.qs</groupId>
+  	<artifactId>qs-parent</artifactId>
+  	<version>0.0.1-SNAPSHOT</version>
+  </parent>
   <build>
 	<plugins>
 	<plugin>
@@ -18,16 +31,4 @@
 	</plugin>
 	</plugins>
   </build>
-  <dependencies>
-  	<dependency>
-  		<groupId>com.qs</groupId>
-  		<artifactId>qs-common</artifactId>
-  		<version>0.0.1-SNAPSHOT</version>
-  	</dependency>
-  </dependencies>
-  <parent>
-  	<groupId>com.qs</groupId>
-  	<artifactId>qs-parent</artifactId>
-  	<version>0.0.1-SNAPSHOT</version>
-  </parent>
 </project>

@@ -23,6 +23,7 @@ public class UserInfo {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
+	
 	public String getMaritalStatus() {
 		return maritalStatus;
 	}

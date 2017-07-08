@@ -1,8 +1,12 @@
 package com.qs.web.controller;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.qs.common.vo.SysResult;
 import com.qs.web.pojo.User;
@@ -22,10 +26,31 @@ public class UserController {
 	}
 	
 	//注册
+	@RequestMapping("/doRegister")
+	@ResponseBody
 	public SysResult saveRegister(User user){
 		String username = userService.saveRegister(user);
 		return SysResult.oK(username);
 	}
+	
+	//转向登陆
+	@RequestMapping("/login")
+	public String login(){
+		return "login";
+	}
+	
+	public SysResult doLogin(String phone,String password,HttpServletRequest request, HttpServletResponse response){
+		try {
+			String ticket = userService.saveLogin(phone,password);
+			return SysResult.oK();
+		} catch (Exception e) {
+			return SysResult.build(201, "登录失败");
+		}
+	}
+	
+	
+	
+	
 	
 	
 	

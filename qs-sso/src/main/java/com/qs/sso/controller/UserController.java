@@ -17,7 +17,6 @@ public class UserController {
 	private UserService userService;
 	
 	
-//	http://sso.qs.com/user/register
 	@RequestMapping("/register")	//注册
 	@ResponseBody
 	public SysResult register(User user){

@@ -1,7 +1,6 @@
 package com.qs.web.pojo;
 
 public class UserInfo {
-<<<<<<< HEAD
 	private Long userId;
 	private String gender;
 	private Integer age;
@@ -76,12 +75,4 @@ public class UserInfo {
 		this.haskid = haskid;
 	}
 	
-	
 }
-
-=======
-	private Long id ; 
-	private String gender;
-	private String age;
-}
->>>>>>> 01d8a0bc4e64944ddc20e43e670f44581f0e7fe3

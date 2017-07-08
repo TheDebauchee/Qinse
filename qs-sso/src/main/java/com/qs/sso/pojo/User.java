@@ -1,4 +1,4 @@
-package com.qs.web.pojo;
+package com.qs.sso.pojo;
 
 import com.qs.common.po.BasePojo;
 
@@ -7,14 +7,7 @@ public class User extends BasePojo{
 	private String username;
 	private String password;
 	private String phone;
-	private UserInfo info;	//基本信息
-	private Spouse spouse;	//择偶意向
-	private UserDetail detail;	//用户详细信息
-	private UserLike userLike;	//用户的爱好
-	private UserPhoto userphoto;	//用户的图片
-	private UserStatus userStatus;	//用户的状态
-	private Uservalues userValues;	//用户的价值观婚姻观
-	
+	private UserInfo info;
 	public Long getUserId() {
 		return userId;
 	}

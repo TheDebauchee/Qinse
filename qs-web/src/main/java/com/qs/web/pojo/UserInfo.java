@@ -4,6 +4,13 @@ public class UserInfo {
 	private Long userId;
 	private String gender;
 	private Integer age;
+<<<<<<< HEAD
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+=======
 	private String maritalStatus;
 	private String workplace;
 	private Integer height;
@@ -16,6 +23,7 @@ public class UserInfo {
 	}
 	public void setUserId(Long userId) {
 		this.userId = userId;
+>>>>>>> c419c745e89b5ec580965b6acab4dd6b2b97d548
 	}
 	public String getGender() {
 		return gender;
@@ -23,6 +31,8 @@ public class UserInfo {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
+<<<<<<< HEAD
+=======
 	
 	public String getMaritalStatus() {
 		return maritalStatus;
@@ -44,12 +54,15 @@ public class UserInfo {
 		this.education = education;
 	}
 	
+>>>>>>> c419c745e89b5ec580965b6acab4dd6b2b97d548
 	public Integer getAge() {
 		return age;
 	}
 	public void setAge(Integer age) {
 		this.age = age;
 	}
+<<<<<<< HEAD
+=======
 	public Integer getHeight() {
 		return height;
 	}
@@ -74,5 +87,6 @@ public class UserInfo {
 	public void setHaskid(String haskid) {
 		this.haskid = haskid;
 	}
+>>>>>>> c419c745e89b5ec580965b6acab4dd6b2b97d548
 	
 }

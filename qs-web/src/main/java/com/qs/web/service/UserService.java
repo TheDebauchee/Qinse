@@ -111,6 +111,23 @@ public class UserService {
 		return username;
 	}
 	
+	//登录
+	public String saveLogin(String phone, String password) {
+		String ticket = null;
+		String url = "http://sso.qs.com/user/login";
+		Map<String,String> params = new HashMap<String,String>();
+		params.put("u", phone);
+		params.put("p", password);
+		try {
+			String jsonData = httpClientService.doPost(url, params);
+			ticket = MAPPER.readTree(jsonData).get("data").asText();
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+		}
+		return ticket;
+	}
+	
 	
 	
 	

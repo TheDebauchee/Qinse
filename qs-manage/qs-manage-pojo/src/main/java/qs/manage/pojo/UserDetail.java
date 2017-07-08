@@ -4,7 +4,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Table(name="user_detail")
-public class UserDetial {
+public class UserDetail {
 	@Id
 	private Long id;
 	private String homeLoc;

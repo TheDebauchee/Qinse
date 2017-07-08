@@ -1,8 +1,8 @@
-package com.qs.web.util;
+package com.qs.web.pojo;
 
 import java.util.Map;
 
-public class User {
+public class UserLabel {
 	private String id;
 	private String name;
 	private Map<String,Double> lable;

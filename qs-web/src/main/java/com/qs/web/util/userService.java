@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.qs.web.pojo.UserLabel;
+
 public class userService {
 
 	public static List<String> getAtteLabelId(String userId) {
@@ -49,7 +51,7 @@ public class userService {
 		return null;
 	}
 
-	public static User findUserById(String userId) {
+	public static UserLabel findUserById(String userId) {
 		// TODO Auto-generated method stub
 		return null;
 	}

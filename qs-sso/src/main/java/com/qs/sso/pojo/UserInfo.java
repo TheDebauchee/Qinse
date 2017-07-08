@@ -1,4 +1,4 @@
-package com.qs.web.pojo;
+package com.qs.sso.pojo;
 
 public class UserInfo {
 	private Long userId;
@@ -23,6 +23,7 @@ public class UserInfo {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
+	
 	public String getMaritalStatus() {
 		return maritalStatus;
 	}
@@ -73,5 +74,6 @@ public class UserInfo {
 	public void setHaskid(String haskid) {
 		this.haskid = haskid;
 	}
+	
 	
 }

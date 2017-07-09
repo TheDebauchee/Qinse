@@ -8,10 +8,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.qs.manage.pojo.User;
 import com.qs.manage.service.UserService;
 
+<<<<<<< HEAD
 import qs.manage.pojo.SelectedMember;
 import qs.manage.pojo.User;
+=======
+>>>>>>> 26575bd8b0db3d0c39c94a0c81c22c85060bbd1e
 
 @Controller
 public class UserController {

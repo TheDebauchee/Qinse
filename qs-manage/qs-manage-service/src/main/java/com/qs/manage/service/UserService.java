@@ -6,20 +6,25 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.qs.common.service.BaseService;
 import com.qs.manage.mapper.UserMapper;
+<<<<<<< HEAD
 
 import qs.manage.pojo.SelectedMember;
 import qs.manage.pojo.SelectedMemberInfo;
 import qs.manage.pojo.User;
 import qs.manage.pojo.UserInfo;
+=======
+import com.qs.manage.pojo.User;
+import com.qs.manage.pojo.UserInfo;
+>>>>>>> 26575bd8b0db3d0c39c94a0c81c22c85060bbd1e
 
 @Service
 public class UserService extends BaseService<User>{
 	@Autowired
 	private UserMapper userMapper;
 
+<<<<<<< HEAD
 	public void saveSelectedMember() throws IOException {
 		SelectedMember user1=new SelectedMember();
 		SelectedMember user2=new SelectedMember();
@@ -104,4 +109,6 @@ public class UserService extends BaseService<User>{
 	public List<SelectedMember> findSelectedMember() {
 		return userMapper.findSelectedMember();
 	}
+=======
+>>>>>>> 26575bd8b0db3d0c39c94a0c81c22c85060bbd1e
 }

@@ -1,8 +1,9 @@
-D:\JT\Qinse\qs-manage\qs-manage-pojo\src\main\java\qs\manage\pojo\UserStatus.java
-D:\JT\Qinse\qs-manage\qs-manage-pojo\src\main\java\qs\manage\pojo\UserTag.java
-D:\JT\Qinse\qs-manage\qs-manage-pojo\src\main\java\qs\manage\pojo\User.java
-D:\JT\Qinse\qs-manage\qs-manage-pojo\src\main\java\qs\manage\pojo\UserInfo.java
-D:\JT\Qinse\qs-manage\qs-manage-pojo\src\main\java\qs\manage\pojo\UserValues.java
-D:\JT\Qinse\qs-manage\qs-manage-pojo\src\main\java\qs\manage\pojo\UserLike.java
-D:\JT\Qinse\qs-manage\qs-manage-pojo\src\main\java\qs\manage\pojo\UserPhoto.java
-D:\JT\Qinse\qs-manage\qs-manage-pojo\src\main\java\qs\manage\pojo\UserDetail.java
+D:\JT\Qinse\qs-manage\qs-manage-pojo\src\main\java\com\qs\manage\pojo\User.java
+D:\JT\Qinse\qs-manage\qs-manage-pojo\src\main\java\com\qs\manage\pojo\UserStatus.java
+D:\JT\Qinse\qs-manage\qs-manage-pojo\src\main\java\com\qs\manage\pojo\UserInfo.java
+D:\JT\Qinse\qs-manage\qs-manage-pojo\src\main\java\com\qs\manage\pojo\UserPhoto.java
+D:\JT\Qinse\qs-manage\qs-manage-pojo\src\main\java\com\qs\manage\pojo\Spouse.java
+D:\JT\Qinse\qs-manage\qs-manage-pojo\src\main\java\com\qs\manage\pojo\UserLike.java
+D:\JT\Qinse\qs-manage\qs-manage-pojo\src\main\java\com\qs\manage\pojo\UserTag.java
+D:\JT\Qinse\qs-manage\qs-manage-pojo\src\main\java\com\qs\manage\pojo\UserValues.java
+D:\JT\Qinse\qs-manage\qs-manage-pojo\src\main\java\com\qs\manage\pojo\UserDetail.java

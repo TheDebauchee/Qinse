@@ -7,7 +7,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import org.junit.Test;
 
 import com.qs.web.pojo.Sim;
 
@@ -141,7 +140,6 @@ public class CupidUtil {
 		Collections.sort(simers);
 		return simers;
 	}
-	@Test
 	public void run(){
 		User user1 = new User();
 		user1.setId("12345");

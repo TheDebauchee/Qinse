@@ -1,5 +1,7 @@
+=\=\=\=\=\=\=
+<<<<<<<=HEAD
+>>>>>>>=06d5c4b908b91f7c710c3b324b4901ace4bf71d7
 eclipse.preferences.version=1
 encoding//src/main/java/com/qs/web/util/CupidUtil.java=UTF-8
 encoding//src/main/resources/httpclient.properties=UTF-8
 encoding//src/main/resources/log4j.properties=UTF-8
-encoding/<project>=UTF-8

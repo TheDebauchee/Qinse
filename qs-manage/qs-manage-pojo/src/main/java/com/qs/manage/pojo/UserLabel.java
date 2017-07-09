@@ -1,4 +1,4 @@
-package com.qs.web.pojo;
+package com.qs.manage.pojo;
 
 import java.util.List;
 import java.util.Map;
@@ -6,7 +6,6 @@ import java.util.Map;
 public class UserLabel {
 	private Long id;
 	private String name;
-	private String gender;
 	private List<AttrTag> labell;
 	private List<MatTag> courtLabell;
 	

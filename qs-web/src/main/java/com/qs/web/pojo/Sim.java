@@ -2,8 +2,8 @@ package com.qs.web.pojo;
 
 public class Sim implements Comparable<Sim>{
 	private Double simm;
-	private String simId;
-	public Sim(String simId,Double simm){
+	private Long simId;
+	public Sim(Long simId,Double simm){
 		this.simId = simId;
 		this.simm = simm;
 	}
@@ -13,10 +13,10 @@ public class Sim implements Comparable<Sim>{
 	public void setSimm(Double simm) {
 		this.simm = simm;
 	}
-	public String getSimId() {
+	public Long getSimId() {
 		return simId;
 	}
-	public void setSimId(String simId) {
+	public void setSimId(Long simId) {
 		this.simId = simId;
 	}
 	public int compareTo(Sim s) {

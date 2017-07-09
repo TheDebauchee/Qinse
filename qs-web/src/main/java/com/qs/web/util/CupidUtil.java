@@ -2,13 +2,16 @@ package com.qs.web.util;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> ab2aa842685dcfe090376ff8bff19a6bd8e6da98
 import com.qs.web.pojo.Sim;
+import com.qs.web.pojo.UserLabel;
 
 public class CupidUtil {
 	public Double contest(Map<String,Double> userLabel ,Map<String,Double> simerLabel){
@@ -35,11 +38,11 @@ public class CupidUtil {
 	 * @param userLabel 某人的求偶标签
 	 */
 	
-	public List<Sim> recomBySim(List<User> simer,Map<String,Double> courtLabel){
+	public List<Sim> recomBySim(List<UserLabel> simer,Map<String,Double> courtLabel){
 		//新建Sim集合存每个匹配的人与某人的相似度
 		List<Sim> sims  = new ArrayList<Sim>();
 		//遍历匹配队列的用户
-		for(User user : simer){
+		for(UserLabel user : simer){
 			//获得匹配队列里用户的标签
 			Map<String, Double> simerLabel = user.getLable();
 			//求与某人的求偶标签的相似度
@@ -58,6 +61,7 @@ public class CupidUtil {
 		return sims;
 	
 	}
+<<<<<<< HEAD
 	/**
 	 * 根据与某人标签匹配，的人的关注的人的标签，匹配某人的择偶标签，选出匹配度最高的四个标签添加到原有的
 	 * 择偶标签上，重新匹配获取前五个
@@ -241,5 +245,7 @@ public class CupidUtil {
 		
 		
 	}
+=======
+>>>>>>> ab2aa842685dcfe090376ff8bff19a6bd8e6da98
 	
 }

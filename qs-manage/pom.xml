@@ -18,9 +18,16 @@
   	<version>0.0.1-SNAPSHOT</version>
   </parent>
   <modules>
-  	<module>qs-manage-mapper</module>
     <module>qs-manage-pojo</module>
+  	<module>qs-manage-mapper</module>
     <module>qs-manage-service</module>
     <module>qs-manage-web</module>
   </modules>
+  <dependencies>
+  	<dependency>
+  		<groupId>com.qs</groupId>
+  		<artifactId>qs-common</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  </dependencies>
 </project>

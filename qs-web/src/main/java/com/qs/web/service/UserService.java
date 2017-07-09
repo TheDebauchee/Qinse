@@ -16,7 +16,11 @@ import com.qs.web.pojo.UserInfo;
 import com.qs.web.pojo.UserLike;
 import com.qs.web.pojo.UserPhoto;
 import com.qs.web.pojo.UserStatus;
+<<<<<<< HEAD
 import com.qs.web.pojo.UserValues;
+=======
+import com.qs.web.pojo.Uservalues;
+>>>>>>> ab2aa842685dcfe090376ff8bff19a6bd8e6da98
 @Service
 public class UserService {
 	@Autowired

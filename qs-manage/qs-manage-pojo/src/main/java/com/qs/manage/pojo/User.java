@@ -3,30 +3,26 @@ package com.qs.manage.pojo;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import com.qs.common.po.BasePojo;
-
 @Table(name="user")
-public class User extends BasePojo {
+public class User {
 	@Id
-	private Long userId;
-	
+	private Long id;
+	private String name;
 	private String password;
 	private String phone;
-	private UserInfo info;	//基本信息
-	private Spouse spouse;	//择偶意向
-	private UserDetail detail;	//用户详细信息
-	private UserLike userLike;	//用户的爱好
-	private UserPhoto userphoto;	//用户的图片
-	private UserStatus userStatus;	//用户的状态
-	private UserValues userValues;	//用户的价值观婚姻观
 	
-	public Long getUserId() {
-		return userId;
+	public Long getId() {
+		return id;
 	}
-	public void setUserId(Long userId) {
-		this.userId = userId;
+	public void setId(Long id) {
+		this.id = id;
 	}
-	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
 	public String getPassword() {
 		return password;
 	}
@@ -39,12 +35,7 @@ public class User extends BasePojo {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-	public UserInfo getInfo() {
-		return info;
-	}
-	public void setInfo(UserInfo info) {
-		this.info = info;
-	}
+	
 	
 	
 }

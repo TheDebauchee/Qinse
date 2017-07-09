@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.qs.common.service.HttpClientService;
+import com.qs.web.pojo.Spouse;
 import com.qs.web.pojo.UserContion;
 import com.qs.web.pojo.UserInfo;
 import com.qs.web.pojo.UserLabel;
@@ -20,11 +21,11 @@ public class CupidService {
 	 * @param userId
 	 * @return
 	 */
-	public UserContion findUserCondById(String userId) {
+	public Spouse findUserCondById(Long userId) {
 		String url = "http://manage.qs.com/user/findUserCondById/"+userId;
 		try {
 			String jsonData = httpService.doGet(url);
-			UserContion userCon = MAPPER.readValue(jsonData, UserContion.class);
+			Spouse userCon = MAPPER.readValue(jsonData, Spouse.class);
 			return userCon;
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -36,13 +37,13 @@ public class CupidService {
 	}
 	/**
 	 * 查找符合求偶条件的用户
-	 * @param userCon
+	 * @param userSpouse
 	 * @return
 	 */
-	public List<UserLabel> findUserByCond(UserContion userCon) {
+	public List<UserLabel> findUserByCond(Spouse userSpouse) {
 		String url = "http://manage.qs.com/userLabel/findUserByCond";
 		try {
-			String jsonData = httpService.doPostJson(url, MAPPER.writeValueAsString(userCon));
+			String jsonData = httpService.doPostJson(url, MAPPER.writeValueAsString(userSpouse));
 			JsonNode jsNode = MAPPER.readTree(jsonData).get("data");
 			Object obj = null;
 	        if (jsNode.isArray() && jsNode.size() > 0) {
@@ -63,7 +64,7 @@ public class CupidService {
 	 * 查找相似的人 resultful
 	 * @param userInfo
 	 * @return
-	 */
+	 *//*
 	public List<UserLabel> findSimUserByCond(UserInfo userInfo) {
 		Integer maxAge = userInfo.getAge()+1;
 		Integer minAge = userInfo.getAge()-1;
@@ -86,6 +87,6 @@ public class CupidService {
 			return null;
 		}
 		
-	}
+	}*/
 
 }

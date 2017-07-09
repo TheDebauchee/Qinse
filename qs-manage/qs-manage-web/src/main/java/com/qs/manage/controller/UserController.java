@@ -6,9 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.qs.manage.pojo.User;
 import com.qs.manage.service.UserService;
 
-import qs.manage.pojo.User;
 
 @Controller
 public class UserController {

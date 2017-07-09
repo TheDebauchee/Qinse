@@ -12,8 +12,8 @@ public class UserLabelService {
 	@Autowired
 	private HttpClientService httpService;
 	private ObjectMapper MAPPER = new ObjectMapper();
-	public  UserLabel findUserById(String userId) {
-		String url = "http:/manage.jt.com/getLabel/"+userId;
+	public  UserLabel findUserById(Long id) {
+		String url = "http:/manage.jt.com/userLabel/findUserById/"+id;
 		try {
 			String jsonData = httpService.doGet(url);
 			UserLabel userLabel = MAPPER.readValue(jsonData, UserLabel.class);

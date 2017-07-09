@@ -9,7 +9,7 @@ import com.qs.web.pojo.UserInfo;
 public class UserInfoService {
 	private HttpClientService httpService;
 	private ObjectMapper MAPPER = new ObjectMapper();
-	public  UserInfo findUserInfoById(String userId) {
+	public  UserInfo findUserInfoById(Long userId) {
 		String url = "http://manage.qs.com/userInfo"+userId;
 		try {
 			String jsonData = httpService.doGet(url);

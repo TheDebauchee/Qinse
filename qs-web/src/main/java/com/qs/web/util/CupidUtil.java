@@ -67,10 +67,10 @@ public class CupidUtil {
 	 * 根据与某人标签匹配，的人的关注的人的标签，匹配某人的择偶标签，选出匹配度最高的四个标签添加到原有的
 	 * 择偶标签上，重新匹配获取前五个
 	 * @param user 某人
-	 * @param simer 跟某人匹配的男性
-	 * @param simer1 符合推荐条件的人群
+	 * @param simer 跟某人相似的同性
+	 * @param simer1 符合推荐条件的异性人群
 	 */
-	public List<Sim> recomLabel(UserLabel user,List<UserLabel> simers,List<UserLabel> simers1){
+	/*public List<Sim> recomLabel(UserLabel user,List<UserLabel> simers,List<UserLabel> simers1){
 		//获得用户属性标签
 		Map<String,Double> userLabel = user.getLable();
 		//此处label为用户的求偶标签
@@ -92,10 +92,14 @@ public class CupidUtil {
 		UserLabelService userLabelService = new UserLabelService();
 		for(int i=0;i<simUsers.size();i++){
 			Double cons = contest(userLabel,simUsers.get(i).getLable());
-			List<String> atteId = userService.findUserAtteIdByID(simUsers.get(i).getId());
+			List<Long> atteId = userService.findUserAtteIdByID(simUsers.get(i).getId());
+			//没有关注的人则跳出此次循环
+			if(atteId==null){
+				continue;
+			}
 			for(int j=0;j<atteId.size();j++){
 				//获得关注的人的属性标签
-				String id = atteId.get(j);
+				Long id = atteId.get(j);
 				UserLabel ul = userLabelService.findUserById(id);
 				Map<String,Double> atteLabel = ul.getLable();
 				//获得跟某人相似的人的关注，并求出相似的人与某人的相似度。在查看是否有一个标签是相似的人喜欢而
@@ -131,8 +135,8 @@ public class CupidUtil {
 			return recomSim.subList(0, 4);
 		}
 		return recomSim;
-	}
-
+	}*/
+/*
 	@Test
 	public void run(){
 		UserLabel user1 = new UserLabel();
@@ -227,13 +231,13 @@ public class CupidUtil {
 		for(int i=0;i<recomLabel.size();i++){
 			System.out.println(recomLabel.get(i));
 		}
-		/*List<Sim> recomBySim = recomBySim(simers, courtlable);
+		List<Sim> recomBySim = recomBySim(simers, courtlable);
 		
 		for(int i=0;i<recomBySim.size();i++){
 			System.out.println(recomBySim.get(i));
-		}*/
+		}
 		
 		
-	}
+	}*/
 	
 }

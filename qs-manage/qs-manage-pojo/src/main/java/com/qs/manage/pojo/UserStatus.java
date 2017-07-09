@@ -1,4 +1,4 @@
-package qs.manage.pojo;
+package com.qs.manage.pojo;
 
 import javax.persistence.Id;
 import javax.persistence.Table;

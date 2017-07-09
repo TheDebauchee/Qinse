@@ -117,14 +117,14 @@ public class UserService {
 	}
 	/**
 	 * 根据用户ID到用户关注表中查询用户关注的人
-	 * @param userId 用户id
+	 * @param long1 用户id
 	 * @return	所有关注的人的集合
 	 */
-	public List<String> findUserAtteIdByID(String userId){
+	public List<Long> findUserAtteIdByID(Long long1){
 		//调用后台接口，到数据库中根据用户Id查询关注的人。
-		String url = "http://manage.qs.com/user/findUserAtteIdById"+userId;
+		String url = "http://manage.qs.com/user/findUserAtteIdById"+long1;
 		//初始化返回参数，避免出现空指针异常
-		List<String> atteIds = new ArrayList();
+		List<Long> atteIds = new ArrayList();
 		try {
 			String jsonData = httpClientService.doGet(url);
 			Object obj = null;
@@ -133,7 +133,7 @@ public class UserService {
 		            obj = MAPPER.readValue(jsNode.traverse(),
 		                    MAPPER.getTypeFactory().constructCollectionType(List.class, UserLabel.class));
 		        }
-			 atteIds = (List<String>) obj;
+			 atteIds = (List<Long>) obj;
 			 return atteIds; 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

@@ -1,28 +1,21 @@
 package com.qs.manage.controller;
 
-<<<<<<< HEAD
-=======
 import java.io.IOException;
 import java.util.List;
->>>>>>> ab2aa842685dcfe090376ff8bff19a6bd8e6da98
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-
-<<<<<<< HEAD
 import com.qs.common.vo.SysResult;
 import com.qs.manage.pojo.User;
 import com.qs.manage.service.UserService;
 
-=======
 import com.qs.manage.pojo.User;
 import com.qs.manage.service.UserService;
 
 import qs.manage.pojo.SelectedMember;
 
->>>>>>> ab2aa842685dcfe090376ff8bff19a6bd8e6da98
 @Controller
 public class UserController {
 	@Autowired
@@ -42,10 +35,8 @@ public class UserController {
 	
 	
 	
-<<<<<<< HEAD
 
 	
-=======
 	//根据条件查找单个用户
 		public User find(User user){
 		User user1 = userService.queryByWhere(user);
@@ -73,7 +64,6 @@ public class UserController {
 	public List<SelectedMember> findSelectedMember(){
 		return userService.findSelectedMember();
 	}
->>>>>>> ab2aa842685dcfe090376ff8bff19a6bd8e6da98
 	
 }
 

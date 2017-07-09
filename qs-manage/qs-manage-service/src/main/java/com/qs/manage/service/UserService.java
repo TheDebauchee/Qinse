@@ -1,33 +1,26 @@
 package com.qs.manage.service;
 
-<<<<<<< HEAD
 import java.util.Date;
 
 import org.apache.commons.codec.digest.DigestUtils;
-=======
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
->>>>>>> ab2aa842685dcfe090376ff8bff19a6bd8e6da98
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.qs.common.service.BaseService;
 import com.qs.manage.mapper.UserMapper;
 import com.qs.manage.pojo.User;
 
-<<<<<<< HEAD
-=======
 import qs.manage.pojo.SelectedMember;
 import qs.manage.pojo.SelectedMemberInfo;
 import com.qs.manage.pojo.User;
->>>>>>> ab2aa842685dcfe090376ff8bff19a6bd8e6da98
 
 @Service
 public class UserService extends BaseService<User>{
 	@Autowired
 	private UserMapper userMapper;
-<<<<<<< HEAD
 	//注册
 	public void saveRegister(User user) {
 		user.setCreated(new Date());
@@ -37,7 +30,6 @@ public class UserService extends BaseService<User>{
 	}
 	
 	
-=======
 
 	public void saveSelectedMember() throws IOException {
 		SelectedMember user1=new SelectedMember();
@@ -123,5 +115,4 @@ public class UserService extends BaseService<User>{
 	public List<SelectedMember> findSelectedMember() {
 		return userMapper.findSelectedMember();
 	}
->>>>>>> ab2aa842685dcfe090376ff8bff19a6bd8e6da98
 }

@@ -3,8 +3,10 @@ package com.qs.manage.pojo;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.qs.common.po.BasePojo;
+
 @Table(name="user")
-public class User {
+public class User extends BasePojo {
 	@Id
 	private Long id;
 	private String name;

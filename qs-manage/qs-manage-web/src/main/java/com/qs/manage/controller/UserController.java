@@ -1,13 +1,16 @@
 package com.qs.manage.controller;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.qs.manage.service.UserService;
 
+import qs.manage.pojo.SelectedMember;
 import qs.manage.pojo.User;
 
 @Controller
@@ -63,6 +66,29 @@ public class UserController {
 		return userList;
 		
 	}
-	
+	//使用KMeans算法查找优质会员并存放到数据库selectedmember表中
+	@RequestMapping("")
+	public void saveSelectedMember(){
+		try {
+			userService.saveSelectedMember();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	@RequestMapping("findSelectedMember")
+	@ResponseBody	//返回json
+	public List<SelectedMember> findSelectedMember(){
+		return userService.findSelectedMember();
+	}
 	
 }
+
+
+
+
+
+
+
+
+
+

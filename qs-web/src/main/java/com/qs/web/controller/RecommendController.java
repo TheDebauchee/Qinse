@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.qs.web.pojo.User;
+import com.qs.web.pojo.SelectedMember;
 import com.qs.web.service.RecommendService;
 
 @Controller
@@ -17,7 +17,7 @@ public class RecommendController {
 	private RecommendService recommendService;
 	@RequestMapping("/recommend")
 	public String recommend(Model model){
-		List<User> users = recommendService.findSelectedMember();
+		List<SelectedMember> users = recommendService.findSelectedMember();
 		model.addAttribute("users",users);
 		return "index";
 	}

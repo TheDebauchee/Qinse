@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: org.qs.manage.mapper.AppTest
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.028 sec
+=======
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.025 sec
+>>>>>>> 06d5c4b908b91f7c710c3b324b4901ace4bf71d7

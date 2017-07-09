@@ -1,25 +1,20 @@
 package com.qs.web.service;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.qs.common.service.HttpClientService;
 import com.qs.web.pojo.Spouse;
 import com.qs.web.pojo.User;
-import com.qs.web.pojo.UserLabel;
 import com.qs.web.pojo.UserDetail;
 import com.qs.web.pojo.UserInfo;
 import com.qs.web.pojo.UserLike;
 import com.qs.web.pojo.UserPhoto;
 import com.qs.web.pojo.UserStatus;
 import com.qs.web.pojo.Uservalues;
-
 
 public class UserService {
 	@Autowired
@@ -115,6 +110,7 @@ public class UserService {
 		}
 		return username;
 	}
+<<<<<<< HEAD
 	/**
 	 * 根据用户ID到用户关注表中查询用户关注的人
 	 * @param long1 用户id
@@ -135,11 +131,27 @@ public class UserService {
 		        }
 			 atteIds = (List<Long>) obj;
 			 return atteIds; 
+=======
+	
+	//登录
+	public String saveLogin(String phone, String password) {
+		String ticket = null;
+		String url = "http://sso.qs.com/user/login";
+		Map<String,String> params = new HashMap<String,String>();
+		params.put("u", phone);
+		params.put("p", password);
+		try {
+			String jsonData = httpClientService.doPost(url, params);
+			ticket = MAPPER.readTree(jsonData).get("data").asText();
+>>>>>>> 06d5c4b908b91f7c710c3b324b4901ace4bf71d7
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
 			e.printStackTrace();
-			return null;
 		}
+		return ticket;
 	}
+	
+	
+	
 	
 }

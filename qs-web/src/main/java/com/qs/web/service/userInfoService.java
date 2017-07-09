@@ -1,9 +1,14 @@
 package com.qs.web.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.qs.common.service.HttpClientService;
 import com.qs.web.pojo.UserInfo;
-<<<<<<< HEAD
 @Service
 public class UserInfoService {
+	@Autowired
 	private HttpClientService httpService;
 	private ObjectMapper MAPPER = new ObjectMapper();
 	public  UserInfo findUserInfoById(Long userId) {
@@ -17,15 +22,5 @@ public class UserInfoService {
 			e.printStackTrace();
 			return null;
 		}
-		
-=======
-
-public class userInfoService {
-
-	public static UserInfo findUserInfoById(String userId) {
-		// TODO Auto-generated method stub
-		return null;
->>>>>>> 06d5c4b908b91f7c710c3b324b4901ace4bf71d7
 	}
-
 }

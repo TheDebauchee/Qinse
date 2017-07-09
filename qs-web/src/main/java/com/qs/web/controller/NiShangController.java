@@ -1,17 +1,15 @@
 package com.qs.web.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-
 import com.alibaba.fastjson.JSONObject;
 import com.qs.web.util.PostServer;
 
 @Controller
 public class NiShangController {
 	@RequestMapping("/NiShang")
-	@ResponseBody
-	public String NiShangQA(String world){
+	public String NiShangQA(String world,Model model){
 		//封装请求参数
 		
 		JSONObject json = new JSONObject();
@@ -21,6 +19,7 @@ public class NiShangController {
 		//请求图灵api
 		String result = PostServer.SendPost(json.toString(), "http://www.tuling123.com/openapi/api");
 		System.out.println(result);
-		return result;
+		model.addAttribute("sss",result);
+		return "index";
 	}
 }

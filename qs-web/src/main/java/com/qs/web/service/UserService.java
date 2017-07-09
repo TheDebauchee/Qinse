@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.qs.common.service.HttpClientService;
@@ -15,7 +16,7 @@ import com.qs.web.pojo.UserLike;
 import com.qs.web.pojo.UserPhoto;
 import com.qs.web.pojo.UserStatus;
 import com.qs.web.pojo.Uservalues;
-
+@Service
 public class UserService {
 	@Autowired
 	private HttpClientService httpClientService;

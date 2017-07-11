@@ -2,6 +2,8 @@ package com.qs.manage.mapper;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Select;
+
 import com.qs.common.mapper.SysMapper;
 import com.qs.manage.pojo.User;
 
@@ -18,6 +20,8 @@ public interface UserMapper extends SysMapper<User> {
 	SelectedMemberInfo findManSelectedMember(SelectedMember user);
 	
 	List<SelectedMember> findSelectedMember();
+	@Select("select count(*) from user where phone=#{phone}")
+	Integer queryByPhone(String phone);
 
 	
 }

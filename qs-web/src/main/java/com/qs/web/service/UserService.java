@@ -8,116 +8,98 @@ import org.springframework.stereotype.Service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.qs.common.service.HttpClientService;
-import com.qs.web.pojo.Spouse;
-import com.qs.web.pojo.User;
-import com.qs.web.pojo.UserDetail;
+import com.qs.web.pojo.BigUser;
 import com.qs.web.pojo.UserInfo;
-import com.qs.web.pojo.UserLike;
-import com.qs.web.pojo.UserPhoto;
-import com.qs.web.pojo.UserStatus;
-import com.qs.web.pojo.UserValues;
 @Service
 public class UserService {
 	@Autowired
 	private HttpClientService httpClientService;
 	private static final ObjectMapper MAPPER = new ObjectMapper();
 	
-	public String saveRegister(User user){
-		String username = null;
-		String url = "http://www.qs.com/user/register";
+	public String saveRegister(BigUser bigUser){
+		String phone = null;
+		String url = "http://manage.qs.com/user/register";
 		Map<String,String> params = new HashMap<String,String>();
-		Long userId = user.getUserId();
-		params.put("password", user.getPassword());
-		params.put("phone", user.getPhone());
-		UserInfo info = new UserInfo();
-		info.setUserId(userId);
-		params.put("gender", info.getGender());
-		params.put("age", info.getAge()+"");
-		params.put("maritalStatus", info.getMaritalStatus());
-		params.put("workplace", info.getWorkplace());
-		params.put("height", info.getHeight()+"");
-		params.put("education", info.getEducation());
-		params.put("salary", info.getSalary()+"");
-		params.put("hashouse", info.getHashouse());
-		params.put("haskid", info.getHaskid());
-		Spouse spouse = new Spouse();
-		spouse.setUserId(userId);
-		params.put("sGender", spouse.getsGender());
-		params.put("sMinAge", spouse.getsMinAge());
-		params.put("sMaxAge", spouse.getsMaxAge());
-		params.put("sMaritalStatus", spouse.getsMaritalStatus());
-		params.put("sWorkplace", spouse.getsWorkplace());
-		params.put("sHomeLoc", spouse.getsHomeLoc());
-		params.put("sEducation", spouse.getsEducation());
-		params.put("sMinHeight", spouse.getsMinHeight());
-		params.put("sMaxHeight", spouse.getsMaxHeight());
-		params.put("sMinSalary", spouse.getsMinSalary());
-		params.put("sHaschild", spouse.getsHaschild());
-		params.put("sHashouse", spouse.getsHashouse());
-		params.put("sDrink", spouse.getsDrink());
-		params.put("sSmoke", spouse.getsSmoke());
+//		Long userId = bigUser.getUserId();
+		params.put("phone", bigUser.getPhone());
+		params.put("password", bigUser.getPassword());
+		params.put("gender", bigUser.getGender());
+		params.put("age", bigUser.getAge()+"");
+		params.put("relname", bigUser.getRelname());
+		params.put("nickname", bigUser.getNickname());
+		params.put("maritalStatus", bigUser.getMaritalStatus());
+		params.put("workplace", bigUser.getWorkplace());
+		params.put("height", bigUser.getHeight()+"");
+		params.put("education", bigUser.getEducation());
+		params.put("salary", bigUser.getSalary()+"");
+		params.put("hashouse", bigUser.getHashouse());
+		params.put("haskid", bigUser.getHaskid());
+		params.put("sGender", bigUser.getsGender());
+		params.put("sMinAge", bigUser.getsMinAge());
+		params.put("sMaxAge", bigUser.getsMaxAge());
+		params.put("sMaritalStatus", bigUser.getsMaritalStatus());
+		params.put("sWorkplace", bigUser.getsWorkplace());
+		params.put("sHomeLoc", bigUser.getsHomeLoc());
+		params.put("sEducation", bigUser.getsEducation());
+		params.put("sMinHeight", bigUser.getsMinHeight());
+		params.put("sMaxHeight", bigUser.getsMaxHeight());
+		params.put("sMinSalary", bigUser.getsMinSalary());
+		params.put("sHaschild", bigUser.getsHaschild());
+		params.put("sHashouse", bigUser.getsHashouse());
+		params.put("sDrink", bigUser.getsDrink());
+		params.put("sSmoke", bigUser.getsSmoke());
 		
-		UserDetail detail = new UserDetail();
-		detail.setUserId(userId);
-		params.put("homeLoc", detail.getHomeLoc());
-		params.put("weight", detail.getWeight());
-		params.put("shape", detail.getShape());
-		params.put("zodiac", detail.getZodiac());
-		params.put("sign", detail.getSign());
-		params.put("race", detail.getRace());
-		params.put("religion", detail.getReligion());
-		params.put("gradFrom", detail.getGradFrom());
-		params.put("major", detail.getMajor());
-		params.put("selfDesc", detail.getSelfDesc());
+		
+		params.put("homeLoc", bigUser.getHomeLoc());
+		params.put("weight", bigUser.getWeight());
+		params.put("shape", bigUser.getShape());
+		params.put("zodiac", bigUser.getZodiac());
+		params.put("sign", bigUser.getSign());
+		params.put("race", bigUser.getRace());
+		params.put("religion", bigUser.getReligion());
+		params.put("gradFrom", bigUser.getGradFrom());
+		params.put("major", bigUser.getMajor());
+		params.put("selfDesc", bigUser.getSelfDesc());
 
 		
-		UserLike userLike = new UserLike();
-		userLike.setUserId(userId);
-		params.put("like", userLike.getLike());
+		params.put("like", bigUser.getHobbies());
 		
-		UserPhoto userphoto	= new  UserPhoto();
-		userphoto.setUserId(userId);
-		params.put("pic1", userphoto.getPic1());
-		params.put("pic2", userphoto.getPic2());
-		params.put("pic3", userphoto.getPic3());
+		params.put("pic1", bigUser.getPic1());
+		params.put("pic2", bigUser.getPic2());
+		params.put("pic3", bigUser.getPic3());
 		
-		UserStatus userStatus = new UserStatus();
-		userStatus.setUserId(userId);
-		params.put("occupation", userStatus.getOccupation());
-		params.put("firm", userStatus.getFirm());
-		params.put("smoke", userStatus.getSmoke());
-		params.put("drink", userStatus.getDrink());
-		params.put("hascar", userStatus.getHascar());
-		params.put("cooking", userStatus.getCooking());
-		params.put("housework", userStatus.getHousework());
+		params.put("occupation", bigUser.getOccupation());
+		params.put("firm", bigUser.getFirm());
+		params.put("smoke", bigUser.getSmoke());
+		params.put("drink", bigUser.getDrink());
+		params.put("hascar", bigUser.getHascar());
+		params.put("cooking", bigUser.getCooking());
+		params.put("housework", bigUser.getHousework());
 		
-		UserValues userValues = new UserValues();
-		userValues.setUserId(userId);
-		params.put("maritalStatus", userValues.getMaritalStatus());
-		params.put("whenToMarry", userValues.getWhenToMarry());
-		params.put("wantKid", userValues.getWantKid());
-		params.put("wantParent", userValues.getWantParent());
-		params.put("wantSeperation", userValues.getWantSeperation());
-		params.put("desiredDate", userValues.getDesiredDate());
+		params.put("whenToMarry", bigUser.getWhenToMarry());
+		params.put("wantKid", bigUser.getWantKid());
+		params.put("wantParent", bigUser.getWantParent());
+		params.put("wantSeperation", bigUser.getWantSeperation());
+		params.put("desiredDate", bigUser.getDesiredDate());
 		
 		
 		try {
-			String jsonData = httpClientService.doPost(url, params);
-			username = MAPPER.readTree(jsonData).get("data").asText();
+			String jsonData = httpClientService.doPost(url, params,"UTF-8");
+			phone = MAPPER.readTree(jsonData).get("data").asText();
 			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return username;
+		return phone;
 	}
 	
 	//登录
 	public String saveLogin(String phone, String password) {
 		String ticket = null;
-		String url = "http://sso.qs.com/user/login";
+		String url = "http://manage.qs.com/user/login";
 		Map<String,String> params = new HashMap<String,String>();
-		params.put("u", phone);
-		params.put("p", password);
+		params.put("phone", phone);
+		params.put("password", password);
 		try {
 			String jsonData = httpClientService.doPost(url, params);
 			ticket = MAPPER.readTree(jsonData).get("data").asText();

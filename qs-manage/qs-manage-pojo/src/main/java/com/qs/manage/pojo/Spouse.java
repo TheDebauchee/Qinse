@@ -1,8 +1,16 @@
 package com.qs.manage.pojo;
+
+import javax.persistence.Column;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  * 择偶意向
  */
+@Table(name="spouse")
 public class Spouse {
+	@Id
+	@Column(name="id")
 	private Long userId;
 	private String sGender;
 	private String sMinAge;
@@ -19,6 +27,8 @@ public class Spouse {
 	private String sHashouse;
 	private String sDrink; 
 	private String sSmoke;
+	
+	
 	public Long getUserId() {
 		return userId;
 	}

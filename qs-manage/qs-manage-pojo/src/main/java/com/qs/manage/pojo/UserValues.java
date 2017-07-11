@@ -1,5 +1,6 @@
 package com.qs.manage.pojo;
 
+import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -10,6 +11,7 @@ import javax.persistence.Table;
 @Table(name="user_values")
 public class UserValues {
 	@Id
+	@Column(name="id")
 	private Long userId;
 	private String maritalStatus;
 	private String whenToMarry; 

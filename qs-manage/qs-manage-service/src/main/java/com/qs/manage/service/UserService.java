@@ -1,34 +1,72 @@
 package com.qs.manage.service;
 
-import java.util.Date;
-
-import org.apache.commons.codec.digest.DigestUtils;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import com.qs.common.service.BaseService;
 import com.qs.manage.mapper.UserMapper;
+import com.qs.manage.pojo.BigUser;
 import com.qs.manage.pojo.User;
-import com.qs.manage.pojo.UserInfo;
 
 import qs.manage.pojo.SelectedMember;
 import qs.manage.pojo.SelectedMemberInfo;
-import com.qs.manage.pojo.User;
 
 @Service
 public class UserService extends BaseService<User>{
 	@Autowired
 	private UserMapper userMapper;
-	//注册
-	public void saveRegister(User user) {
-		user.setCreated(new Date());
-		user.setUpdated(user.getCreated());
-		user.setPassword(DigestUtils.md5Hex(user.getPassword()));
-		userMapper.insertSelective(user);
+	//查询手机号是否重复
+	public Boolean queryByPhone(String phone) {
+		Integer i = userMapper.queryByPhone(phone);
+		if(i==1){
+			return true;
+		}else{
+			return false;
+		}
 	}
+
+	//注册
+	public Long saveRegister(BigUser bigUser) {
+		User user = new User();
+		user.setPhone(bigUser.getPhone());
+		user.setPassword(DigestUtils.md5Hex(bigUser.getPassword()));
+		userMapper.insertSelective(user);
+		return user.getUserId();
+	}
+	
+	//登录
+	public String savelogin(String phone,String password){
+		String ticket = "";
+		User params = new User();
+		params.setPhone(phone);
+		User curUser = super.queryByWhere(params);
+		if(null!=curUser){
+			String newPwd = DigestUtils.md5Hex(password);
+			if(newPwd.equals(curUser.getPassword())){
+				ticket =DigestUtils.md5Hex(System.currentTimeMillis() + curUser.getPhone()+curUser.getUserId());
+//					redisService.set(ticket, MAPPER.writeValueAsString(curUser),86400*7);	//jvm编译时就算出来了
+			}
+		}
+		return ticket;
+	}
+		
+//		redis以后向redis获取缓存信息
+//		@RequestMapping("/query/{ticket}")
+//		@ResponseBody
+//		public SysResult queryByTicket(@PathVariable String ticket){
+//			try {
+//				String userJson = redisService.get(ticket);
+//				return SysResult.oK(userJson); 
+//			} catch (Exception e) {
+//				return SysResult.build(201,"查询用户信息失败!"); 
+//			}
+//		}
+		
 	
 	
 
@@ -117,6 +155,8 @@ public class UserService extends BaseService<User>{
 		return userMapper.findSelectedMember();
 	}
 
+
+	
 
 	
 }

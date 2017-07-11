@@ -6,6 +6,8 @@ import com.qs.common.mapper.SysMapper;
 
 import qs.manage.pojo.SelectedMember;
 import qs.manage.pojo.SelectedMemberInfo;
+import qs.manage.pojo.UserGreet;
+
 import com.qs.manage.pojo.User;
 
 public interface UserMapper extends SysMapper<User> {
@@ -17,6 +19,12 @@ public interface UserMapper extends SysMapper<User> {
 	SelectedMemberInfo findManSelectedMember(SelectedMember user);
 	
 	List<SelectedMember> findSelectedMember();
+
+	void sayHi(UserGreet ug);
+
+	Long getUserId(Long myId);
+
+	String getNickName(Long userId);
 
 	
 }

@@ -128,8 +128,28 @@ public class UserService {
 		}
 		return ticket;
 	}
+
+	public void sayHi(Long myId, Long userId) {
+		try {
+			String url="http://manage.qs.com/web/sayHi/"+myId+"/"+userId;
+			httpClientService.doGet(url);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public String getMessage(Long myId) {
+		try {
+			String url="http://manage.qs.com/web/getMessage/"+myId;
+			String nickName=httpClientService.doGet(url);
+			return nickName;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
 	
-	
+
 	
 	
 }

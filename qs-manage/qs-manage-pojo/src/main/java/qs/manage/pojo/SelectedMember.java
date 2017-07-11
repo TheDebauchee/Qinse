@@ -5,8 +5,7 @@ import java.util.List;
 
 public class SelectedMember {
 	private String education;
-	private Integer maxSalary;
-	private Integer minSalary;
+	private Integer Salary;
 	private Integer maxHeight;
 	private Integer minHeight;
 	private Integer maxAge;
@@ -19,17 +18,12 @@ public class SelectedMember {
 	public void setEducation(String education) {
 		this.education = education;
 	}
-	public Integer getMaxSalary() {
-		return maxSalary;
+	
+	public Integer getSalary() {
+		return Salary;
 	}
-	public void setMaxSalary(Integer maxSalary) {
-		this.maxSalary = maxSalary;
-	}
-	public Integer getMinSalary() {
-		return minSalary;
-	}
-	public void setMinSalary(Integer minSalary) {
-		this.minSalary = minSalary;
+	public void setSalary(Integer salary) {
+		Salary = salary;
 	}
 	public Integer getMaxHeight() {
 		return maxHeight;
@@ -69,10 +63,11 @@ public class SelectedMember {
 	}
 	@Override
 	public String toString() {
-		return "SelectedMember [education=" + education + ", maxSalary=" + maxSalary + ", minSalary=" + minSalary
-				+ ", maxHeight=" + maxHeight + ", minHeight=" + minHeight + ", maxAge=" + maxAge + ", minAge=" + minAge
-				+ ", centers=" + centers + ", member=" + member + "]";
+		return "SelectedMember [education=" + education + ", Salary=" + Salary + ", maxHeight=" + maxHeight
+				+ ", minHeight=" + minHeight + ", maxAge=" + maxAge + ", minAge=" + minAge + ", centers=" + centers
+				+ ", member=" + member + "]";
 	}
+
 
 	
 }

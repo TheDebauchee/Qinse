@@ -6,19 +6,35 @@ import javax.persistence.Table;
 @Table(name="user_info")
 public class UserInfo {
 	@Id
-	private Long id;
+	private Long userId;
 	private String gender;
-	private String education;
-	private String salary;
-	private String height;
+	private Integer age;
+	private String relname;
+	private String nickname;
+	private String maritalStatus;
 	private String workplace;
+	private Integer height;
+	private String education;
+	private Integer salary;
 	private String hashouse;
 	private String haskid;
-	public Long getId() {
-		return id;
+	public Long getUserId() {
+		return userId;
 	}
-	public void setId(Long id) {
-		this.id = id;
+	public void setUserId(Long userId) {
+		this.userId = userId;
+	}
+	public String getRelname() {
+		return relname;
+	}
+	public void setRelname(String relname) {
+		this.relname = relname;
+	}
+	public String getNickname() {
+		return nickname;
+	}
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
 	}
 	public String getGender() {
 		return gender;
@@ -26,29 +42,44 @@ public class UserInfo {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-	public String getEducation() {
-		return education;
+	
+	public String getMaritalStatus() {
+		return maritalStatus;
 	}
-	public void setEducation(String education) {
-		this.education = education;
-	}
-	public String getSalary() {
-		return salary;
-	}
-	public void setSalary(String salary) {
-		this.salary = salary;
-	}
-	public String getHeight() {
-		return height;
-	}
-	public void setHeight(String height) {
-		this.height = height;
+	public void setMaritalStatus(String maritalStatus) {
+		this.maritalStatus = maritalStatus;
 	}
 	public String getWorkplace() {
 		return workplace;
 	}
 	public void setWorkplace(String workplace) {
 		this.workplace = workplace;
+	}
+	
+	public String getEducation() {
+		return education;
+	}
+	public void setEducation(String education) {
+		this.education = education;
+	}
+	
+	public Integer getAge() {
+		return age;
+	}
+	public void setAge(Integer age) {
+		this.age = age;
+	}
+	public Integer getHeight() {
+		return height;
+	}
+	public void setHeight(Integer height) {
+		this.height = height;
+	}
+	public Integer getSalary() {
+		return salary;
+	}
+	public void setSalary(Integer salary) {
+		this.salary = salary;
 	}
 	public String getHashouse() {
 		return hashouse;
@@ -62,7 +93,5 @@ public class UserInfo {
 	public void setHaskid(String haskid) {
 		this.haskid = haskid;
 	}
-	
-	
 	
 }

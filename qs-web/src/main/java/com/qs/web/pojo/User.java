@@ -4,7 +4,6 @@ import com.qs.common.po.BasePojo;
 
 public class User extends BasePojo{
 	private Long userId;
-	private String username;
 	private String password;
 	private String phone;
 	private UserInfo info;	//基本信息
@@ -13,19 +12,13 @@ public class User extends BasePojo{
 	private UserLike userLike;	//用户的爱好
 	private UserPhoto userphoto;	//用户的图片
 	private UserStatus userStatus;	//用户的状态
-	private Uservalues userValues;	//用户的价值观婚姻观
+	private UserValues userValues;	//用户的价值观婚姻观
 	
 	public Long getUserId() {
 		return userId;
 	}
 	public void setUserId(Long userId) {
 		this.userId = userId;
-	}
-	public String getUsername() {
-		return username;
-	}
-	public void setUsername(String username) {
-		this.username = username;
 	}
 	public String getPassword() {
 		return password;

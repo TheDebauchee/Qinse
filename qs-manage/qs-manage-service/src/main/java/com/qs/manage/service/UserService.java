@@ -1,5 +1,8 @@
 package com.qs.manage.service;
 
+import java.util.Date;
+
+import org.apache.commons.codec.digest.DigestUtils;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,6 +14,10 @@ import org.springframework.stereotype.Service;
 import com.qs.common.service.BaseService;
 import com.qs.manage.mapper.UserMapper;
 import com.qs.manage.pojo.User;
+<<<<<<< HEAD
+=======
+import com.qs.manage.pojo.UserInfo;
+>>>>>>> 385d261f0ccc945f192cc82b348eb0e0795bb89f
 
 import qs.manage.pojo.SelectedMember;
 import qs.manage.pojo.SelectedMemberInfo;
@@ -20,6 +27,15 @@ import qs.manage.pojo.UserGreet;
 public class UserService extends BaseService<User>{
 	@Autowired
 	private UserMapper userMapper;
+	//注册
+	public void saveRegister(User user) {
+		user.setCreated(new Date());
+		user.setUpdated(user.getCreated());
+		user.setPassword(DigestUtils.md5Hex(user.getPassword()));
+		userMapper.insertSelective(user);
+	}
+	
+	
 
 	@Test
 	public void saveSelectedMember() throws IOException {
@@ -103,6 +119,7 @@ public class UserService extends BaseService<User>{
 		return userMapper.findSelectedMember();
 	}
 
+<<<<<<< HEAD
 	public void sayHi(Long myId, Long userId) {
 		UserGreet ug=new UserGreet();
 		String hi="你好，很高兴认识你。 看了你的资料和照片很想跟你做个朋友";
@@ -119,4 +136,8 @@ public class UserService extends BaseService<User>{
 	public String getNickName(Long userId) {
 		return userMapper.getNickName(userId);
 	}
+=======
+
+	
+>>>>>>> 385d261f0ccc945f192cc82b348eb0e0795bb89f
 }

@@ -19,7 +19,7 @@ public class NiShangController {
 		//请求图灵api
 		String result = PostServer.SendPost(json.toString(), "http://www.tuling123.com/openapi/api");
 		System.out.println(result);
-		model.addAttribute("sss",result);
+		model.addAttribute("result",result);
 		return "index";
 	}
 }

@@ -3,21 +3,25 @@ package com.qs.manage.pojo;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/**
+ *用户的婚姻观 
+ *
+ */
 @Table(name="user_values")
 public class UserValues {
 	@Id
-	private Long id;
+	private Long userId;
 	private String maritalStatus;
-	private String whenToMarry;
+	private String whenToMarry; 
 	private String wantKid;
-	private String wantParent;
+	private String wantParent; 
 	private String wantSeperation;
 	private String desiredDate;
-	public Long getId() {
-		return id;
+	public Long getUserId() {
+		return userId;
 	}
-	public void setId(Long id) {
-		this.id = id;
+	public void setUserId(Long userId) {
+		this.userId = userId;
 	}
 	public String getMaritalStatus() {
 		return maritalStatus;
@@ -55,6 +59,7 @@ public class UserValues {
 	public void setDesiredDate(String desiredDate) {
 		this.desiredDate = desiredDate;
 	}
+	
 	
 	
 	

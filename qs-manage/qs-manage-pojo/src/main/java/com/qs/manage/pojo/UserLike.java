@@ -6,13 +6,13 @@ import javax.persistence.Table;
 @Table(name="user_like")
 public class UserLike {
 	@Id
-	private Long id;
+	private Long userId;
 	private String like;
-	public Long getId() {
-		return id;
+	public Long getUserId() {
+		return userId;
 	}
-	public void setId(Long id) {
-		this.id = id;
+	public void setUserId(Long userId) {
+		this.userId = userId;
 	}
 	public String getLike() {
 		return like;
@@ -20,6 +20,5 @@ public class UserLike {
 	public void setLike(String like) {
 		this.like = like;
 	}
-	
 	
 }

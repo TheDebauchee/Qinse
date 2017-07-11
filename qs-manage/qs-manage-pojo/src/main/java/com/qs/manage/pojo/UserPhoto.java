@@ -6,15 +6,15 @@ import javax.persistence.Table;
 @Table(name="user_photo")
 public class UserPhoto {
 	@Id
-	private Long id;
+	private Long userId;
 	private String pic1;
 	private String pic2;
 	private String pic3;
-	public Long getId() {
-		return id;
+	public Long getUserId() {
+		return userId;
 	}
-	public void setId(Long id) {
-		this.id = id;
+	public void setUserId(Long userId) {
+		this.userId = userId;
 	}
 	public String getPic1() {
 		return pic1;
@@ -34,6 +34,7 @@ public class UserPhoto {
 	public void setPic3(String pic3) {
 		this.pic3 = pic3;
 	}
+	
 	
 	
 }

@@ -7,20 +7,23 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
 import com.qs.common.vo.SysResult;
 import com.qs.manage.pojo.User;
-import com.qs.manage.service.UserService;
-
-import com.qs.manage.pojo.User;
+import com.qs.manage.pojo.UserInfo;
+import com.qs.manage.service.UserInfoService;
 import com.qs.manage.service.UserService;
 
 import qs.manage.pojo.SelectedMember;
 
 @Controller
+@RequestMapping("/user")
 public class UserController {
 	@Autowired
 	private UserService userService;
 	
+	@Autowired
+	private UserInfoService userInfoService;
 	
 	@RequestMapping("/register")	//注册
 	@ResponseBody
@@ -32,16 +35,25 @@ public class UserController {
 			return SysResult.build(201, "注册失败");
 		}
 	}
-	
-	
+	//更新UserInfo
+	@RequestMapping("/update")
+	@ResponseBody
+	public SysResult updateUserInfo(UserInfo info){
+		try {
+			userInfoService.updateUserInfo(info);
+			return SysResult.oK();
+		} catch (Exception e) {
+			return SysResult.build(201, "更新失败!");
+		}
+	}
 	
 
 	
 	//根据条件查找单个用户
-		public User find(User user){
+	public User find(User user){
 		User user1 = userService.queryByWhere(user);
 		return user1;
-		}
+	}
 		
 	//根据条件查找多个用户
 	@RequestMapping("")
@@ -64,6 +76,10 @@ public class UserController {
 	public List<SelectedMember> findSelectedMember(){
 		return userService.findSelectedMember();
 	}
+	
+	
+	
+	
 	
 }
 

@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import com.qs.common.service.BaseService;
 import com.qs.manage.mapper.UserMapper;
 import com.qs.manage.pojo.User;
+import com.qs.manage.pojo.UserInfo;
 
 import qs.manage.pojo.SelectedMember;
 import qs.manage.pojo.SelectedMemberInfo;
@@ -115,4 +116,7 @@ public class UserService extends BaseService<User>{
 	public List<SelectedMember> findSelectedMember() {
 		return userMapper.findSelectedMember();
 	}
+
+
+	
 }

@@ -1,6 +1,5 @@
 package com.qs.web.service;
 
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -134,6 +133,8 @@ public class UserService {
 		String url = "http://manage.qs.com/user/update";
 		Map<String,String> params = new HashMap<String,String>();
 		params.put("gender", info.getGender());
+		params.put("relname", info.getRelname());
+		params.put("nickname", info.getNickname());
 		params.put("age", info.getAge()+"");
 		params.put("maritalStatus", info.getMaritalStatus());
 		params.put("workplace", info.getWorkplace());

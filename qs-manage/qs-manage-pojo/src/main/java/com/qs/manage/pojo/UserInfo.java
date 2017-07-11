@@ -9,7 +9,7 @@ public class UserInfo {
 	private Long userId;
 	private String gender;
 	private Integer age;
-	private String username;
+	private String relname;
 	private String nickname;
 	private String maritalStatus;
 	private String workplace;
@@ -24,12 +24,11 @@ public class UserInfo {
 	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
-	
-	public String getUsername() {
-		return username;
+	public String getRelname() {
+		return relname;
 	}
-	public void setUsername(String username) {
-		this.username = username;
+	public void setRelname(String relname) {
+		this.relname = relname;
 	}
 	public String getNickname() {
 		return nickname;

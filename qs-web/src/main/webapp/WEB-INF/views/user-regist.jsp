@@ -3,20 +3,35 @@
 <script type="text/javascript" charset="utf-8" src="/js/kindeditor-4.1.10/kindeditor-all-min.js"></script>
 <script type="text/javascript" charset="utf-8" src="/js/kindeditor-4.1.10/lang/zh_CN.js"></script>
 <div style="padding:10px 10px 10px 10px">
-	<form id="userUpdate" class="itemForm" method="post">
+	<form id="updateRegist" class="itemForm" method="post">
 	    <table cellpadding="5">
        <tr>
 	           昵称:<input type="hidden" name="userId" style="width: 280px"/>
-	            	<input type="text" name="username" style="width: 280px" value="${user.username}"></input>
+	    <input type="text" name="nickname" style="width: 280px" value="${info.nickname}"></input>
         </tr>
-        
-	            工作地区:<input name="workplace" style="height:60px;width: 280px;">${userInfo.workplace}</input>
+        <tr>
+	            真实姓名:<input type="text" name="phone" style="width: 280px" value="${user.relname}"></input>
+        </tr>
+        <tr>
+	            性别:<input type="text" name="phone" style="width: 280px" value="${user.gender}"></input>
+        </tr>
+        <tr>
+	            年龄:<input type="text" name="phone" style="width: 280px" value="${user.age}"></input>
+        </tr>
+        <tr>
+	            婚姻状态:<input type="text" name="phone" style="width: 280px" value="${user.maritalStatus}"></input>
+        </tr>
+        <tr>
+	            工作地点:<input name="workplace" style="height:60px;width: 280px;">${userInfo.workplace}</input>
         </tr>
         <tr>
 	            月收入:<input type="text" name="salary">${userInfo.salary}</input>
         </tr>
         <tr>
 	            身高:<input type="text" name="height">${userInfo.height}</input>
+        </tr>
+        <tr>
+	            学历:<input type="text" name="height">${userInfo.education}</input>
         </tr>
         <tr>
 	            住房条件:<input type="text" name="hashouse">${userInfo.hashouse}</input>

@@ -19,7 +19,7 @@ public class RecommendService {
 	private static final ObjectMapper MAPPER = new ObjectMapper();
 	public List<SelectedMember> findSelectedMember(){
 		try {
-			String url = "http://manage.qs.com/web/findSelectedMember/";
+			String url = "http://manage.qs.com/web/findSelectedMember";
 			String jsonData = httpClientService.doGet(url);
 			JsonNode jsNode = MAPPER.readTree(jsonData).get("data");
 			Object obj = null;

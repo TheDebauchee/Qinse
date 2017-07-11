@@ -7,12 +7,20 @@ import javax.persistence.Table;
 public class SelectedMemberInfo {
 	@Id
 	private Long id;
+	private String userPhoto;
 	private String gender;
 	private String education;
 	private String salary;
 	private String height;
 	private String workplace;
 	private String age;
+	
+	public String getUserPhoto() {
+		return userPhoto;
+	}
+	public void setUserPhoto(String userPhoto) {
+		this.userPhoto = userPhoto;
+	}
 	public Long getId() {
 		return id;
 	}

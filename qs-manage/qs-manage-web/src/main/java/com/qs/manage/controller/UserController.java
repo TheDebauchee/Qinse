@@ -120,17 +120,27 @@ public class UserController {
 			e.printStackTrace();
 		}
 	}
-	@RequestMapping("findSelectedMember")
+	@RequestMapping("/findSelectedMember")
 	@ResponseBody	//返回json
 	public List<SelectedMember> findSelectedMember(){
 		return userService.findSelectedMember();
 	}
+	//打招呼
+	@RequestMapping("/{myId}/{userId}")
+	public void sayHi(Long myId,Long userId){
+		userService.sayHi(myId,userId);
+	}
+	
+	@RequestMapping("/getMessage/{myId}")
+	public String getMessage(Long myId){
+		Long userId=userService.getUserId(myId);
+		return userService.getNickName(userId);
+	}
+} 
 	
 	
 	
 	
-	
-}
 
 
 

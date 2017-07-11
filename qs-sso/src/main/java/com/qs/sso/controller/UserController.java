@@ -17,18 +17,6 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 	
-	
-	@RequestMapping("/register")	//注册
-	@ResponseBody
-	public SysResult register(User user){
-		try {
-			String username = userService.saveRegister(user);
-			return SysResult.oK(username);
-		} catch (Exception e) {
-			return SysResult.build(201, "注册失败",user.getUsername());
-		}
-	}
-	
 	//登录
 	@RequestMapping("/login")
 	@ResponseBody

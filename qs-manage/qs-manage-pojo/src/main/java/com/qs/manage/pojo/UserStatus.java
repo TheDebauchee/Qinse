@@ -6,20 +6,19 @@ import javax.persistence.Table;
 @Table(name="user_status")
 public class UserStatus {
 	@Id
-	private Long id;
-	private String occupation;
-	private String firm;
-	private String smoke;
-	private String drink;
-	private String hascar;
-	private String cooking;
-	private String housework;
-	private String recentPurches;
-	public Long getId() {
-		return id;
+	private Long userId;
+	private String occupation;	//用户的职业
+	private String firm;	//用户的公司
+	private String smoke;	//是否抽烟
+	private String drink;	//是否喝酒
+	private String hascar;	//是否有车
+	private String cooking;	//是否会做饭
+	private String housework;	//家务
+	public Long getUserId() {
+		return userId;
 	}
-	public void setId(Long id) {
-		this.id = id;
+	public void setUserId(Long userId) {
+		this.userId = userId;
 	}
 	public String getOccupation() {
 		return occupation;
@@ -63,12 +62,5 @@ public class UserStatus {
 	public void setHousework(String housework) {
 		this.housework = housework;
 	}
-	public String getRecentPurches() {
-		return recentPurches;
-	}
-	public void setRecentPurches(String recentPurches) {
-		this.recentPurches = recentPurches;
-	}
-	
 	
 }

@@ -17,15 +17,7 @@ public class UserService extends BaseService<User>{
 	private UserMapper userMapper;
 	
 
-	//注册
-	public String saveRegister(User user) {
-		user.setCreated(new Date());
-		user.setUpdated(user.getCreated());
-		user.setPassword(DigestUtils.md5Hex(user.getPassword()));
-		userMapper.insertSelective(user);
-		return user.getUsername();
-	}
-
+	
 	public String savelogin(String phone,String password){
 		String ticket = "";
 		User params = new User();

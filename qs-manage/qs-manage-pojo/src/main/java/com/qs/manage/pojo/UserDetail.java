@@ -6,22 +6,22 @@ import javax.persistence.Table;
 @Table(name="user_detail")
 public class UserDetail {
 	@Id
-	private Long id;
+	private Long userId;
 	private String homeLoc;
 	private String weight;
-	private String shape;
-	private String zodiac;
-	private String sign;
-	private String race;
-	private String religion;
-	private String gradFrom;
-	private String major;
-	private String selfDesc;
-	public Long getId() {
-		return id;
+	private String shape;	//体型
+	private String zodiac;	//生肖
+	private String sign;	//星座
+	private String race;	//民族 
+	private String religion;  //宗教信仰
+	private String gradFrom;	//毕业院校
+	private String major;		//专业
+	private String selfDesc;	//自我描述
+	public Long getUserId() {
+		return userId;
 	}
-	public void setId(Long id) {
-		this.id = id;
+	public void setUserId(Long userId) {
+		this.userId = userId;
 	}
 	public String getHomeLoc() {
 		return homeLoc;
@@ -83,5 +83,7 @@ public class UserDetail {
 	public void setSelfDesc(String selfDesc) {
 		this.selfDesc = selfDesc;
 	}
+	
+	
 	
 }

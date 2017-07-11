@@ -15,7 +15,7 @@ import com.qs.web.pojo.UserInfo;
 import com.qs.web.pojo.UserLike;
 import com.qs.web.pojo.UserPhoto;
 import com.qs.web.pojo.UserStatus;
-import com.qs.web.pojo.Uservalues;
+import com.qs.web.pojo.UserValues;
 @Service
 public class UserService {
 	@Autowired
@@ -24,10 +24,9 @@ public class UserService {
 	
 	public String saveRegister(User user){
 		String username = null;
-		String url = "http://sso.qs.com/user/register";
+		String url = "http://www.qs.com/user/register";
 		Map<String,String> params = new HashMap<String,String>();
 		Long userId = user.getUserId();
-		params.put("username", user.getUsername());
 		params.put("password", user.getPassword());
 		params.put("phone", user.getPhone());
 		UserInfo info = new UserInfo();
@@ -92,7 +91,7 @@ public class UserService {
 		params.put("cooking", userStatus.getCooking());
 		params.put("housework", userStatus.getHousework());
 		
-		Uservalues userValues = new Uservalues();
+		UserValues userValues = new UserValues();
 		userValues.setUserId(userId);
 		params.put("maritalStatus", userValues.getMaritalStatus());
 		params.put("whenToMarry", userValues.getWhenToMarry());
@@ -127,6 +126,31 @@ public class UserService {
 			e.printStackTrace();
 		}
 		return ticket;
+	}
+	
+	//更新user基本信息
+	public void updateUserInfo(UserInfo info) {
+		String url = "http://manage.qs.com/user/update";
+		Map<String,String> params = new HashMap<String,String>();
+		params.put("gender", info.getGender());
+		params.put("relname", info.getRelname());
+		params.put("nickname", info.getNickname());
+		params.put("age", info.getAge()+"");
+		params.put("maritalStatus", info.getMaritalStatus());
+		params.put("workplace", info.getWorkplace());
+		params.put("height", info.getHeight()+"");
+		params.put("education", info.getEducation());
+		params.put("salary", info.getSalary()+"");
+		params.put("hashouse", info.getHashouse());
+		params.put("haskid", info.getHaskid());
+		try {
+			httpClientService.doPost(url, params);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		
 	}
 	
 	

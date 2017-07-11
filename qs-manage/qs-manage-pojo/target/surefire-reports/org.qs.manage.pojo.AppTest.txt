@@ -2,7 +2,11 @@
 Test set: org.qs.manage.pojo.AppTest
 -------------------------------------------------------------------------------
 <<<<<<< HEAD
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 sec
+=======
+<<<<<<< HEAD
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.025 sec
 =======
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.027 sec
 >>>>>>> 06d5c4b908b91f7c710c3b324b4901ace4bf71d7
+>>>>>>> ab2aa842685dcfe090376ff8bff19a6bd8e6da98

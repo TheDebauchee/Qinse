@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.qs.common.vo.SysResult;
 import com.qs.web.pojo.User;
+import com.qs.web.pojo.UserInfo;
 import com.qs.web.service.UserService;
 
 @Controller
@@ -48,9 +49,24 @@ public class UserController {
 		}
 	}
 	
+	//查看个人中心
+	@RequestMapping("/info")
+	public String selectInfo(){
+		
+		return "index";
+	}
 	
-	
-	
+	//修改个人资料
+	@RequestMapping("/update")
+	public SysResult updateRegist(UserInfo info){
+		try {
+			userService.updateUserInfo(info);
+			return SysResult.oK();
+		} catch (Exception e) {
+			return SysResult.build(201, "更新失败!");
+		}
+		
+	}
 	
 	
 	

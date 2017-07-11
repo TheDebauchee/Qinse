@@ -37,11 +37,15 @@
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 7"/>
 <<<<<<< HEAD
+    <property name="classworlds.conf" value="D:\marriage\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf6530158734075585375.tmp"/>
+=======
+<<<<<<< HEAD
     <property name="classworlds.conf" value="D:\qsns\qsqs\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf3616292466035563743.tmp"/>
     <property name="sun.jnu.encoding" value="GBK"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_45\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\myworkspace\oracle\app\oracle\product\10.2.0\server\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.7.0_15\bin;C:\Program Files\Java\jdk1.7.0_15\jre\bin;D:\MySQL\MySQL Server 5.5\bin;D:\myworkspace\apache-maven-3.3.1\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\SSH Communications Security\SSH Secure Shell;."/>
 =======
     <property name="classworlds.conf" value="D:\marriage\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf335723195589175753.tmp"/>
+>>>>>>> ab2aa842685dcfe090376ff8bff19a6bd8e6da98
     <property name="sun.jnu.encoding" value="GBK"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk1.7.0_15\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\software\oracle\app\oracle\product\10.2.0\server\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.7.0_15\bin;C:\Program Files\Java\jdk1.7.0_15\jre\bin;D:\mysql5.5\bin;C:\Python31;D:\WorkJarSource\apache-maven-3.3.1/bin;C:\Program Files\VisualSVN Server\bin;D:\software\TortoiseSVN\bin;C:\Program Files (x86)\SSH Communications Security\SSH Secure Shell;."/>
 >>>>>>> 06d5c4b908b91f7c710c3b324b4901ace4bf71d7

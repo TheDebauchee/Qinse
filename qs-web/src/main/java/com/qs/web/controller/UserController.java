@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -81,7 +82,18 @@ public class UserController {
 		}
 		
 	}
-	
+	@RequestMapping("/sayhi")
+	public void sayHi(Long myId,Long userId){
+		userService.sayHi(myId,userId);
+	}
+	@RequestMapping("/getmessage")
+	public String getMessage(Long myId,Model model){
+		String nickName=userService.getMessage(myId);
+		model.addAttribute("nickName",nickName);
+		int hi=1;
+		model.addAttribute("hi",hi);
+		return "index";
+	}
 	
 	
 	

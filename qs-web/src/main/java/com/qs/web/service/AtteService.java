@@ -3,13 +3,14 @@ package com.qs.web.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.qs.common.service.HttpClientService;
 import com.qs.web.pojo.AtteUser;
 import com.qs.web.pojo.UserLabel;
-
+@Service
 public class AtteService {
 	@Autowired
 	private HttpClientService httpService;

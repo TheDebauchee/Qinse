@@ -1,0 +1,6 @@
+
+.search-byid { float:left; width:670px; height:40px;}
+.search-byid input { float:left; display:inline; width:570px; height:38px; padding:0 5px; line-height:26px; border:1px solid #e2e0e0; color:#646464; }
+.search-byid .btn_search_id { float:left; width:80px; height:38px; line-height:36px; border:1px solid #e2e0e0; border-left:none; background-color:#f0f0f0; background-image:url(//images.zastatic.com/zhenai3/zhenai2015/img/search/lar_cc6c799.png); background-position:4px center; background-repeat:no-repeat;}
+.search-byid .btn_search_id:hover { background-color:#e9e9e9;}
+.cond_wrap_in{ float: left;}

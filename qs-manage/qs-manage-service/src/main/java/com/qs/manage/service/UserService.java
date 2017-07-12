@@ -14,10 +14,7 @@ import org.springframework.stereotype.Service;
 import com.qs.common.service.BaseService;
 import com.qs.manage.mapper.UserMapper;
 import com.qs.manage.pojo.User;
-<<<<<<< HEAD
-=======
 import com.qs.manage.pojo.UserInfo;
->>>>>>> 385d261f0ccc945f192cc82b348eb0e0795bb89f
 
 import qs.manage.pojo.SelectedMember;
 import qs.manage.pojo.SelectedMemberInfo;
@@ -74,14 +71,14 @@ public class UserService extends BaseService<User>{
 		user4.setMinHeight(Integer.parseInt(new java.text.DecimalFormat("0").format(womanList.get(3).get(2))));
 		user4.setMaxHeight(Integer.parseInt(new java.text.DecimalFormat("0").format(womanList.get(3).get(3))));
 		System.out.println(user1);
-		/*SelectedMemberInfo user11=userMapper.findWomanSelectedMember(user1);
+		SelectedMemberInfo user11=userMapper.findWomanSelectedMember(user1);
 		userMapper.saveSelectedMember(user11);
 		SelectedMemberInfo user22=userMapper.findWomanSelectedMember(user2);
 		userMapper.saveSelectedMember(user22);
 		SelectedMemberInfo user33=userMapper.findWomanSelectedMember(user3);
 		userMapper.saveSelectedMember(user33);
 		SelectedMemberInfo user44=userMapper.findWomanSelectedMember(user4);
-		userMapper.saveSelectedMember(user44);*/
+		userMapper.saveSelectedMember(user44);
 		user5.setMinAge(Integer.parseInt(new java.text.DecimalFormat("0").format(manList.get(4).get(0))));
 		user5.setMaxAge(Integer.parseInt(new java.text.DecimalFormat("0").format(manList.get(4).get(1))));
 		user5.setSalary(Integer.parseInt(new java.text.DecimalFormat("0").format(manList.get(4).get(4))));
@@ -119,7 +116,6 @@ public class UserService extends BaseService<User>{
 		return userMapper.findSelectedMember();
 	}
 
-<<<<<<< HEAD
 	public void sayHi(Long myId, Long userId) {
 		UserGreet ug=new UserGreet();
 		String hi="你好，很高兴认识你。 看了你的资料和照片很想跟你做个朋友";
@@ -136,8 +132,6 @@ public class UserService extends BaseService<User>{
 	public String getNickName(Long userId) {
 		return userMapper.getNickName(userId);
 	}
-=======
 
 	
->>>>>>> 385d261f0ccc945f192cc82b348eb0e0795bb89f
 }

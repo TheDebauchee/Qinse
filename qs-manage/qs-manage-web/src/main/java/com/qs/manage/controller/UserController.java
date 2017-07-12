@@ -82,20 +82,17 @@ public class UserController {
 		userService.sayHi(myId,userId);
 	}
 	
-<<<<<<< HEAD
 	@RequestMapping("/getMessage/{myId}")
 	public String getMessage(Long myId){
 		Long userId=userService.getUserId(myId);
 		return userService.getNickName(userId);
 	}
 } 
-=======
 	
 	
 	
 	
-}
->>>>>>> 385d261f0ccc945f192cc82b348eb0e0795bb89f
+
 
 
 

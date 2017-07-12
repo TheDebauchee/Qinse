@@ -148,9 +148,7 @@ public class UserService {
 		return null;
 	}
 	
-<<<<<<< HEAD
 
-=======
 	//更新user基本信息
 	public void updateUserInfo(UserInfo info) {
 		String url = "http://manage.qs.com/user/update";
@@ -177,7 +175,6 @@ public class UserService {
 	}
 	
 	
->>>>>>> 385d261f0ccc945f192cc82b348eb0e0795bb89f
 	
 	
 }

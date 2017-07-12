@@ -4,7 +4,7 @@
 <script type="text/javascript" charset="utf-8" src="/js/kindeditor-4.1.10/lang/zh_CN.js"></script>
 <div style="padding:10px 10px 10px 10px">
 	<form id="updateRegist" class="itemForm" method="post">
-	    <table cellpadding="5">
+	<input type="hidden" name="userId" value="${info.userId}"/>
        <tr>
 	           您的昵称:<input type="hidden" name="userId" style="width: 280px"/>
 	    <input type="text" name="nickname" style="width: 280px" value="${info.nickname}"></input>
@@ -106,20 +106,101 @@
 	             </select>
         </tr>
         <tr>
-	             您的身高:<input type="text" name="height">${info.height}</input>
+	           您的身高:
+  				<select name="height">
+	            <option>以后告诉你</option>
+	            <option>150及以下</option>
+	            <option>151</option>
+	            <option>152</option>
+	            <option>153</option>
+	            <option>154</option>
+	            <option>155</option>
+	            <option>156</option>
+	            <option>157</option>
+	            <option>158</option>
+	            <option>159</option>
+	            <option>160</option>
+	            <option>161</option>
+	            <option>162</option>
+	            <option>163</option>
+	            <option>164</option>
+	            <option>165</option>
+	            <option>166</option>
+	            <option>167</option>
+	            <option>168</option>
+	            <option>169</option>
+	            <option>170</option>
+	            <option>171</option>
+	            <option>172</option>
+	            <option>173</option>
+	            <option>174</option>
+	            <option>175</option>
+	            <option>176</option>
+	            <option>177</option>
+	            <option>178</option>
+	            <option>179</option>
+	            <option>180</option>
+	            <option>181</option>
+	            <option>182</option>
+	            <option>183</option>
+	            <option>184</option>
+	            <option>185</option>
+	            <option>186</option>
+	            <option>187</option>
+	            <option>188</option>
+	            <option>189</option>
+	            <option>190</option>
+	            <option>191</option>
+	            <option>192</option>
+	            <option>193</option>
+	            <option>194</option>
+	            <option>195</option>
+	            <option>196</option>
+	            <option>197</option>
+	            <option>198</option>
+	            <option>199</option>
+	            <option>200或以上</option>
+	            </select>
         </tr>
         <tr>
-	             您的学历:<input type="text" name="height">${info.education}</input>
+	            您的学历:<select name="education">
+  		 <option>请选择</option>
+		 <option>初中</option>
+		 <option>中专/职高/技校</option>
+		 <option>高中</option>
+		 <option>大专</option>
+		 <option>本科</option>
+		 <option>硕士</option>
+		 <option>博士</option>
+		 <option>博士后</option>
+	            </select>
         </tr>
         <tr>
-	             您的住房条件:<input type="text" name="hashouse">${info.hashouse}</input>
+	        您有无房子:<select name="hashouse">
+	            <option>请选择</option>                                
+<option>以后再告诉你</option>
+<option>与父母同住</option>
+<option>租房</option>
+<option>已购房(有贷款)</option>
+<option>已购房(无贷款)</option>
+<option>住单位房</option>
+<option>住亲朋家</option>
+<option>需要时购置</option>
+
+	            </select>
         </tr>
         <tr>
-	             您有无孩子:<input type="text" name=haskid>${info.haskid}</input>
+	            您有无孩子:<select name="haskid">
+	            <option>请选择</option>
+<option>没有</option>
+<option>有，和我住一起</option>
+<option>有，有时和我住一起</option>
+<option>有，不和我住一起</option>
+
+	            </select>
         </tr>
         
 	    </table>
-	    <input type="hidden" name="itemParams"/>
 	</form>
 	<div style="padding:5px">
 	    <a href="/page/user-spouse" onclick="submitForm()">保存并继续</a>

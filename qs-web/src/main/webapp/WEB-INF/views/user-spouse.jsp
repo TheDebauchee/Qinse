@@ -6,7 +6,7 @@
 	<form id="updateSpouse" class="itemForm" method="post">
 	    <table>
 	
-	    
+	    <input type="hidden" name="userId" value="${spouse.userId}"/>
        <tr>
 	           性别:<input type="hidden" name="userId" style="width: 280px"/>
 	    <input type="text" name="sGender" style="width: 280px" value="${info.sGender}"></input>
@@ -311,11 +311,10 @@
         </tr>
         
 	    </table>
-	    <input type="hidden" name="itemParams"/>
 	</form>
 	<div style="padding:5px">
-	    <a href="/page/user-spouse" onclick="submitForm()">保存并继续</a>
-	    <a href="/page/user-spouse">跳过</a>
+	    <a href="/page/user-detail" onclick="submitForm()">保存并继续</a>
+	    <a href="/page/user-detail">跳过</a>
 	</div>
 </div>
 <script type="text/javascript">

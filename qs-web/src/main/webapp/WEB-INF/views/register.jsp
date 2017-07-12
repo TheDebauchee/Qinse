@@ -81,9 +81,9 @@
 		   <option>丧偶</option>  
 	            </select>
   		您的工作地点:<input type="text" name="workplace"/>
-  		您的身高:<input type="text" name="height"/>
-  		<select>
-	            <option value="0">以后告诉你</option>
+  		您的身高:
+  				<select name="height">
+	            <option>以后告诉你</option>
 	            <option>150及以下</option>
 	            <option>151</option>
 	            <option>152</option>
@@ -137,7 +137,7 @@
 	            <option>200或以上</option>
 	            </select>
 	            
-  		学历:<select name="education">
+  		您的学历:<select name="education">
   		 <option>请选择</option>
 		 <option>初中</option>
 		 <option>中专/职高/技校</option>

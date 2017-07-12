@@ -5,17 +5,15 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.qs.common.vo.SysResult;
 import com.qs.web.service.UserService;
 
-@Controller
+/*@Controller
 public class UserGreetController {
 	@Autowired
 	private UserService userService;
 	@RequestMapping("")
-	public SysResult sayHi(Long myId,Long userId){
+	public void sayHi(Long myId,Long userId){
 		userService.sayHi(myId,userId);
-		return SysResult.oK();
 	}
 	@RequestMapping("")
 	public String getMessage(Long myId,Model model){
@@ -25,4 +23,4 @@ public class UserGreetController {
 		model.addAttribute("hi",hi);
 		return "index";
 	}
-}
+}*/

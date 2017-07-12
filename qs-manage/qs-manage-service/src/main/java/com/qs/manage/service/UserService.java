@@ -76,7 +76,6 @@ public class UserService extends BaseService<User>{
 	
 	
 
-	@Test
 	public void saveSelectedMember() throws IOException {
 		SelectedMember user1=new SelectedMember();
 		SelectedMember user2=new SelectedMember();

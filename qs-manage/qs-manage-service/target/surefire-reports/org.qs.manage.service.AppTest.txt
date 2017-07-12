@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: org.qs.manage.service.AppTest
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.026 sec
+=======
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 sec
+>>>>>>> a7c5d173b5810f4d955528ec671e15473cc89357

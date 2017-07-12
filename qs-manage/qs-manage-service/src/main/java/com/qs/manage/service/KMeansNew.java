@@ -54,9 +54,9 @@ public class KMeansNew {
 		//随机确定K个初始聚类中心
 		Random rd = new Random();
 		//int k=4;
-		int [] initIndex={0,3,8};
-		int [] helpIndex = {0,3,8};
-		int [] givenIndex = {1,2,3,4};
+		int [] initIndex={1,2,3,4};
+		int [] helpIndex = {0,3,1,4};
+		int [] givenIndex = {0,2,3,4};
 		System.out.println("random centers' index");
 		for(int i=0;i<k;i++){
 			//int index = rd.nextInt(initIndex[i]) + helpIndex[i];

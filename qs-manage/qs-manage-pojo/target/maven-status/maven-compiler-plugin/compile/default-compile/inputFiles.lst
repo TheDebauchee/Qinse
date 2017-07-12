@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 D:\github\Qinse\qs-manage\qs-manage-pojo\src\main\java\com\qs\manage\pojo\UserValues.java
 D:\github\Qinse\qs-manage\qs-manage-pojo\src\main\java\qs\manage\pojo\SelectedMemberInfo.java
 D:\github\Qinse\qs-manage\qs-manage-pojo\src\main\java\com\qs\manage\pojo\UserInfo.java
@@ -12,3 +13,20 @@ D:\github\Qinse\qs-manage\qs-manage-pojo\src\main\java\com\qs\manage\pojo\UserSt
 D:\github\Qinse\qs-manage\qs-manage-pojo\src\main\java\qs\manage\pojo\SelectedMember.java
 D:\github\Qinse\qs-manage\qs-manage-pojo\src\main\java\com\qs\manage\pojo\UserLabel.java
 D:\github\Qinse\qs-manage\qs-manage-pojo\src\main\java\com\qs\manage\pojo\MatTag.java
+=======
+D:\JT\Qinse\qs-manage\qs-manage-pojo\src\main\java\com\qs\manage\pojo\BigUser.java
+D:\JT\Qinse\qs-manage\qs-manage-pojo\src\main\java\com\qs\manage\pojo\UserLabel.java
+D:\JT\Qinse\qs-manage\qs-manage-pojo\src\main\java\com\qs\manage\pojo\UserInfo.java
+D:\JT\Qinse\qs-manage\qs-manage-pojo\src\main\java\com\qs\manage\pojo\UserValues.java
+D:\JT\Qinse\qs-manage\qs-manage-pojo\src\main\java\qs\manage\pojo\SelectedMember.java
+D:\JT\Qinse\qs-manage\qs-manage-pojo\src\main\java\com\qs\manage\pojo\UserDetail.java
+D:\JT\Qinse\qs-manage\qs-manage-pojo\src\main\java\com\qs\manage\pojo\AttrTag.java
+D:\JT\Qinse\qs-manage\qs-manage-pojo\src\main\java\com\qs\manage\pojo\MatTag.java
+D:\JT\Qinse\qs-manage\qs-manage-pojo\src\main\java\com\qs\manage\pojo\User.java
+D:\JT\Qinse\qs-manage\qs-manage-pojo\src\main\java\com\qs\manage\pojo\UserStatus.java
+D:\JT\Qinse\qs-manage\qs-manage-pojo\src\main\java\com\qs\manage\pojo\UserPhoto.java
+D:\JT\Qinse\qs-manage\qs-manage-pojo\src\main\java\com\qs\manage\pojo\Spouse.java
+D:\JT\Qinse\qs-manage\qs-manage-pojo\src\main\java\com\qs\manage\pojo\UserTag.java
+D:\JT\Qinse\qs-manage\qs-manage-pojo\src\main\java\com\qs\manage\pojo\UserLike.java
+D:\JT\Qinse\qs-manage\qs-manage-pojo\src\main\java\qs\manage\pojo\SelectedMemberInfo.java
+>>>>>>> a7c5d173b5810f4d955528ec671e15473cc89357

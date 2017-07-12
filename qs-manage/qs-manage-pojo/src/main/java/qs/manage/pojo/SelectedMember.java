@@ -4,32 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SelectedMember {
-	private String education;
-	private Integer maxSalary;
-	private Integer minSalary;
+	private Integer salary;
 	private Integer maxHeight;
 	private Integer minHeight;
 	private Integer maxAge;
 	private Integer minAge;
 	private List<ArrayList<Double>> centers;
 	private List<Double> member;
-	public String getEducation() {
-		return education;
+
+	public Integer getSalary() {
+		return salary;
 	}
-	public void setEducation(String education) {
-		this.education = education;
-	}
-	public Integer getMaxSalary() {
-		return maxSalary;
-	}
-	public void setMaxSalary(Integer maxSalary) {
-		this.maxSalary = maxSalary;
-	}
-	public Integer getMinSalary() {
-		return minSalary;
-	}
-	public void setMinSalary(Integer minSalary) {
-		this.minSalary = minSalary;
+	public void setSalary(Integer salary) {
+		this.salary = salary;
 	}
 	public Integer getMaxHeight() {
 		return maxHeight;
@@ -69,10 +56,10 @@ public class SelectedMember {
 	}
 	@Override
 	public String toString() {
-		return "SelectedMember [education=" + education + ", maxSalary=" + maxSalary + ", minSalary=" + minSalary
-				+ ", maxHeight=" + maxHeight + ", minHeight=" + minHeight + ", maxAge=" + maxAge + ", minAge=" + minAge
-				+ ", centers=" + centers + ", member=" + member + "]";
+		return "SelectedMember [salary=" + salary + ", maxHeight=" + maxHeight + ", minHeight=" + minHeight
+				+ ", maxAge=" + maxAge + ", minAge=" + minAge + ", centers=" + centers + ", member=" + member + "]";
 	}
+
 
 	
 }

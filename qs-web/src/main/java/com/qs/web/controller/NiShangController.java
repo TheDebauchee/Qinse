@@ -4,7 +4,6 @@ package com.qs.web.controller;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -24,8 +23,10 @@ public class NiShangController {
 		//json.put("loc", "中国北京市大兴区");
 		//请求图灵api
 		String result = PostServer.SendPost(json.toString(), "http://www.tuling123.com/openapi/api");
+
 		
 		
 		return result;
+
 	}
 }

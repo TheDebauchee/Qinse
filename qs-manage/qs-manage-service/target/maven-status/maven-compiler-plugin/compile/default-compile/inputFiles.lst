@@ -1,4 +1,17 @@
+<<<<<<< HEAD
 D:\github\Qinse\qs-manage\qs-manage-service\src\main\java\com\qs\manage\service\KMeansNew.java
 D:\github\Qinse\qs-manage\qs-manage-service\src\main\java\com\qs\manage\service\UserInfoService.java
 D:\github\Qinse\qs-manage\qs-manage-service\src\main\java\com\qs\manage\service\UserLaelService.java
 D:\github\Qinse\qs-manage\qs-manage-service\src\main\java\com\qs\manage\service\UserService.java
+=======
+D:\JT\Qinse\qs-manage\qs-manage-service\src\main\java\com\qs\manage\service\KMeansNew.java
+D:\JT\Qinse\qs-manage\qs-manage-service\src\main\java\com\qs\manage\service\UserValuesService.java
+D:\JT\Qinse\qs-manage\qs-manage-service\src\main\java\com\qs\manage\service\UserService.java
+D:\JT\Qinse\qs-manage\qs-manage-service\src\main\java\com\qs\manage\service\UserLaelService.java
+D:\JT\Qinse\qs-manage\qs-manage-service\src\main\java\com\qs\manage\service\UserInfoService.java
+D:\JT\Qinse\qs-manage\qs-manage-service\src\main\java\com\qs\manage\service\UserDetailService.java
+D:\JT\Qinse\qs-manage\qs-manage-service\src\main\java\com\qs\manage\service\UserLikeService.java
+D:\JT\Qinse\qs-manage\qs-manage-service\src\main\java\com\qs\manage\service\UserPhotoService.java
+D:\JT\Qinse\qs-manage\qs-manage-service\src\main\java\com\qs\manage\service\UserStatusService.java
+D:\JT\Qinse\qs-manage\qs-manage-service\src\main\java\com\qs\manage\service\UserSpouseService.java
+>>>>>>> a7c5d173b5810f4d955528ec671e15473cc89357

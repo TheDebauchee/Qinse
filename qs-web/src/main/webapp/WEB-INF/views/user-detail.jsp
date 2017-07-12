@@ -8,19 +8,12 @@
 	
 	    
         <tr>
-	            籍贯:<select name="homeLoc">
-	            <option selected="selected">请选择</option>
-	            <option>北京</option>
-	            <option>上海</option>
-	            <option>广州</option>
-	            <option>深圳</option>
-	            <option>重庆</option>
-	            <option>天津</option>
-	            </select>
+        <input type="hidden" name="userId" value="${userDetail.userId }">
+	            您的籍贯:<input type="text" name="homeLoc">
         </tr>
         <tr>
-	            体重:<select name="weight">
-	            <option selected="selected">请选择</option>
+	            您的体重:<select name="weight">
+	            <option>请选择</option>
 	            <option>40及以下</option>
 	            <option>41</option>
 	            <option>42</option>
@@ -116,37 +109,21 @@
 	            </select>
         </tr>
         <tr>
-	            体型:<select name="shape">
-	            <option>请选择</option>
-	            <option>一般</option>
-	            <option>瘦长</option>
-	            <option>运动员型</option>
-	            <option>比较胖</option>
-	            <option>体格魁梧</option>
-	            <option>壮实</option>
-	            <option selected="selected">保密</option>
+	            您的体型:<select name="shape">
+	           <option>请选择</option>
+	              <option>很瘦</option>
+ <option>较瘦</option>
+<option>苗条</option>
+ <option>匀称</option>
+ <option>高挑</option>
+ <option>丰满</option>
+ <option>健壮</option>
+ <option>较胖</option>
+ <option>胖</option>
 	            </select>
         </tr>
         <tr>
-	            生肖:<select name="zodiac">
-	            <option>请选择</option>
-	            <option>鼠</option>
-	            <option>牛</option>
-	            <option>虎</option>
-	            <option>兔</option>
-	            <option>龙</option>
-	            <option>蛇</option>
-	            <option>马</option>
-	            <option>羊</option>
-	            <option>猴</option>
-	            <option>鸡</option>
-	            <option>狗</option>
-	            <option>猪</option>
-	            <option selected="selected">保密</option>
-	            </select>
-        </tr>
-        <tr>
-	            星座:<select name="sign">
+	            您的生肖:<select name="zodiac">
 	            <option>请选择</option>
 	            <option>鼠</option>
 	            <option>牛</option>
@@ -164,9 +141,37 @@
 	            </select>
         </tr>
         <tr>
-	            民族:<select name="race">
-	            <option selected="selected">请选择</option>
-	            <option>保密</option>
+	           您的星座:<select name="sign">
+	            <option>以后告诉你</option>
+	           <!--  <option>白羊座(3.21-4.19)</option>
+	            <option>金牛座(4.20-5.20)</option>
+	            <option>双子座(5.21-6.21)</option>
+	            <option>巨蟹座(6.22-7.22)</option>
+	            <option>狮子座(7.23-8.22)</option>
+	            <option>处女座(8.23-9.22)</option>
+	            <option>天秤座(9.23-10.23)</option>
+	            <option>天蝎座(10.24-11.22)</option>
+	            <option>射手座(11.23-12.21)</option>
+	            <option>摩羯座(12.22-1.19)</option>
+	            <option>水瓶座(1.20-2.18)</option>
+	            <option>双鱼座(2.19-3.20)</option> -->
+	            <option>白羊座</option>
+	            <option>金牛座</option>
+	            <option>双子座</option>
+	            <option>巨蟹座</option>
+	            <option>狮子座</option>
+	            <option>处女座</option>
+	            <option>天秤座</option>
+	            <option>天蝎座</option>
+	            <option>射手座</option>
+	            <option>摩羯座</option>
+	            <option>水瓶座</option>
+	            <option>双鱼座</option>
+	            </select>
+        </tr>
+        <tr>
+	           您的民族:<select name="race">
+	            <option>以后告诉你</option>
 	            <option>汉族</option>
 	            <option>回族</option>
 	            <option>满族</option>
@@ -228,21 +233,25 @@
 	            </select>
         </tr>
         <tr>
-	            宗教信仰:<select name="religion">
+	            您的宗教信仰:<select name="religion">
 	            <option selected="selected">请选择</option>
-	            <option>不信教</option>
-	            <option>基督教</option>
-	            <option>佛教</option>
-	            <option>伊斯兰教</option>
-	            <option>道教</option>
-	            <option>天主教</option>
-	            <option>儒家门徒</option>
-	            <option>不可知论者</option>
-	            <option>其他宗教</option>
+	           <option >请选择</option>
+ <option>无神论</option>
+ <option>佛教</option>
+ <option>道教</option>
+ <option>基督教</option>
+ <option>天主教</option>
+<option>其它</option>
+ <option>信神但未定教</option>
+ <option>儒教</option>
+ <option>犹太教</option>
+<option >回教</option>
+ <option >伊斯兰教</option>
+ <option >印度教</option>
 	            </select>
         </tr>
         <tr>
-        	毕业院校:<input type="text" name="gradFrom" style="width: 280px" value="${userDetail.gradFrom}"></input>
+        	您的毕业院校:<input type="text" name="gradFrom" style="width: 280px" value="${userDetail.gradFrom}"></input>
         </tr>
         <tr>
         	自我描述:<input type="text" name="selfDesc" style="width: 280px" value="${userDetail.selfDesc}"></input>
@@ -251,8 +260,8 @@
 	    <input type="hidden" name="itemParams"/>
 	</form>
 	<div style="padding:5px">
-	    <a href="/page/user-spouse" onclick="submitForm()">保存并继续</a>
-	    <a href="/page/user-spouse">跳过</a>
+	    <a href="/page/user-status" onclick="submitForm()">保存并继续</a>
+	    <a href="/page/user-status">跳过</a>
 	</div>
 </div>
 <script type="text/javascript">

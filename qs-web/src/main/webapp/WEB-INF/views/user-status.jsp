@@ -5,10 +5,10 @@
 <div style="padding:10px 10px 10px 10px">
 	<form id="updateStatus" class="itemForm" method="post">
 	    <table>
-	    
+	    <input type="hidden" name="userId" value="${userStatus.userId}"/>
         <tr>
-	            职业:<select name="occupation">
-	            <option selected="selected">请选择</option>
+	            您的职业:<select name="occupation">
+	            <option>以后告诉你</option>
 	            <option>销售</option>
 	            <option>计算机/互联网</option>
 	            <option>通信/电子</option>
@@ -40,57 +40,62 @@
         </tr>
         
         <tr>
-	            公司类别:<select name="firm">
-	            <option selected="selected">请选择</option>
-	            <option>政府机关</option>
-	            <option>事业单位</option>
-	            <option>外资企业</option>
-	            <option>合资企业</option>
-	            <option>国营企业</option>
-	            <option>私营企业</option>
-	            <option>自有公司</option>
-	            <option>其他</option>
+	           您的公司类别:<select name="firm">
+	            <option>请选择</option>
+<option>政府机关</option>
+<option>事业单位</option>
+<option>外企企业</option>
+<option>世界500强</option>
+<option>上市公司</option>
+<option>国有企业</option>
+<option>私营企业</option>
+<option>自有公司</option>
 	            </select>
         </tr>
         <tr>
-	            是否吸烟:<select name="smoke">
-	            <option selected="selected">请选择</option>
-	            <option>不吸烟</option>
-	            <option>稍微抽一点儿</option>
-	            <option>只在社交场合抽</option>
-	            <option>抽的很多</option>
+	          您是否吸烟:<select name="smoke">
+	             <option>请选择</option>
+ <option>不吸，很反感</option>
+ <option>不吸烟，但不反感</option>
+ <option>社交时偶尔吸烟</option>
+ <option>烟不离手</option>
+
+	            </select>
+  		
+        </tr>
+        <tr>
+	             您是否喝酒:<select name="drink">
+	              <option >请选择</option>
+  <option>不喝酒</option>
+  <option>社交需要喝</option>
+  <option>兴致时小酌</option>
+  <option>酒不离口</option>
 	            </select>
         </tr>
         <tr>
-	            是否喝酒:<select name="drink">
-	            <option selected="selected">请选择</option>
-	            <option>不喝酒</option>
-	            <option>稍微喝一点儿</option>
-	            <option>只在社交场合喝</option>
-	            <option>喝的很多</option>
+	        您是否已购车:<select name="hascar">
+	            <option >请选择</option>
+<option>未购车</option>
+<option>已购车</option>
+<option>单位用车</option>
+<option>需要时购置</option>
 	            </select>
         </tr>
         <tr>
-	            是否购车:<select name="hascar">
-	            <option selected="selected">请选择</option>
-	            <option>已买车</option>
-	            <option>未买车</option>
-	            </select>
+	        您对家务的看法:<select name="housework">
+	            <option >请选择</option>
+<option>任劳任怨</option>
+<option>希望对方承担家务</option>
+<option>一起分工合作</option>
+<option>看各自闲忙，协商分担</option>
+	            </select>  		
         </tr>
         <tr>
-	            家务:<select name="housework">
-	            <option selected="selected">请选择</option>
-	            <option>愿承担大部分家务</option>
-	            <option>希望对方承担大部分家务</option>
-	            <option>看各自闲忙程度，协商分担家务</option>
-	            </select>
-        </tr>
-        <tr>
-	           厨艺:<select name="cooking">
-	            <option selected="selected">请选择</option>
-	            <option>色香味俱全</option>
-	            <option>能做几样可口的小菜</option>
-	            <option>有待提高</option>
+您的厨艺水平:<select name="cooking">
+ <option >请选择</option>
+<option>色香味俱全</option>
+<option>能做几样可口的小菜</option>
+<option>不太会，但愿为心爱的人学习</option>
 	            </select>
         </tr>
      
@@ -98,8 +103,8 @@
 	    <input type="hidden" name="itemParams"/>
 	</form>
 	<div style="padding:5px">
-	    <a href="/page/user-spouse" onclick="submitForm()">保存并继续</a>
-	    <a href="/page/user-spouse">跳过</a>
+	    <a href="/page/user-values" onclick="submitForm()">保存并继续</a>
+	    <a href="/page/user-values">跳过</a>
 	</div>
 </div>
 <script type="text/javascript">

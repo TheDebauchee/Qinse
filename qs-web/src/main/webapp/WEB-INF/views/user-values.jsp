@@ -6,16 +6,16 @@
 	<form id="updateValues" class="itemForm" method="post">
 	    <table>
         <tr>
-	            婚姻状况:<select name="maritalStatus">
-	            <option selected="selected">请选择</option>
+	            您的婚姻状况:<select name="maritalStatus">
+	            <option selected="selected">以后告诉你</option>
 	            <option>未婚</option>
 	            <option>离异</option>
 	            <option>丧偶</option>
 	            </select>
 		</tr>
         <tr>
-	           想何时结婚:<select name="whenToMarry">
-	            <option selected="selected">请选择</option>
+	           您想何时结婚:<select name="whenToMarry">
+	            <option selected="selected">以后告诉你</option>
 	            <option>认同闪婚</option>
 	            <option>一年内</option>
 	            <option>两年内</option>
@@ -24,38 +24,33 @@
 	            </select>
 		</tr>
         <tr>
-	           是否想要孩子:<select name="wantKid">
-	            <option selected="selected">请选择</option>
+	           您是否想要孩子:<select name="wantKid">
+	            <option selected="selected">以后告诉你</option>
 	            <option>想要孩子</option>
 	            <option>不想要孩子</option>
 	            <option>视情况而定</option>
 	            </select>
 		</tr>
         <tr>
-	           是否愿意婚后与父母同住:<select name=wantParent>
-	            <option selected="selected">请选择</option>
+	           您是否愿意婚后与父母同住:<select name=wantParent>
+	            <option selected="selected">以后告诉你</option>
 	            <option>愿意</option>
 	            <option>不愿意</option>
 	            <option>视具体情况而定</option>
 	            </select>
 		</tr>
         <tr>
-	           是否接受异地恋:<select name=wantSeperation>
-	            <option selected="selected">请选择</option>
+	           您是否接受异地恋:<select name=wantSeperation>
+	            <option selected="selected">以后告诉你</option>
 	            <option>接受</option>
 	            <option>不接受</option>
 	            <option>视具体情况而定</option>
 	            </select>
 		</tr>
 		<tr>
-		喜欢什么样的约会:<input type="checkbox" name="desiredDate">
+		您喜欢什么样的约会:<input type="checkbox" name="desiredDate">
 		</tr>
-        <tr>
-        	毕业院校:<input type="text" name="gradFrom" style="width: 280px" value="${userDetail.gradFrom}"></input>
-        </tr>
-        <tr>
-        	自我描述:<input type="text" name="selfDesc" style="width: 280px" value="${userDetail.selfDesc}"></input>
-        </tr>
+       
 	    </table>
 	    <input type="hidden" name="itemParams"/>
 	</form>

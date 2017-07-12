@@ -8,8 +8,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.qs.common.util.CookieUtils;
 import com.qs.common.vo.SysResult;
-import com.qs.web.pojo.User;
+import com.qs.web.pojo.BigUser;
 import com.qs.web.pojo.UserInfo;
 import com.qs.web.service.UserService;
 
@@ -23,15 +24,16 @@ public class UserController {
 	//转向注册页面
 	@RequestMapping("/register")
 	public String register(){
-		return "regeister";
+		return "register";
 	}
 	
 	//注册
 	@RequestMapping("/doRegister")
 	@ResponseBody
-	public SysResult saveRegister(User user){
-		String username = userService.saveRegister(user);
-		return SysResult.oK(username);
+	public SysResult saveRegister(BigUser bigUser){
+		String phone = userService.saveRegister(bigUser);
+		
+		return SysResult.oK(phone);
 	}
 	
 	//转向登陆
@@ -40,13 +42,25 @@ public class UserController {
 		return "login";
 	}
 	
+	@RequestMapping("/doLogin")
+	@ResponseBody
 	public SysResult doLogin(String phone,String password,HttpServletRequest request, HttpServletResponse response){
 		try {
 			String ticket = userService.saveLogin(phone,password);
+			String cookieName = "QS_TICKET";
+			CookieUtils.setCookie(request, response, cookieName, ticket);
 			return SysResult.oK();
 		} catch (Exception e) {
 			return SysResult.build(201, "登录失败");
 		}
+	}
+	
+	//登出
+	@RequestMapping("/logout")
+	public String logout(HttpServletRequest request, HttpServletResponse response){
+		//删除cookie
+		CookieUtils.deleteCookie(request, response, "QS_TICKET");
+		return "index";
 	}
 	
 	//查看个人中心

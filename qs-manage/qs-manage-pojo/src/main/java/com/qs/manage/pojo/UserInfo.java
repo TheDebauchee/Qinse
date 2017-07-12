@@ -1,21 +1,23 @@
 package com.qs.manage.pojo;
 
+import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Table(name="user_info")
 public class UserInfo {
 	@Id
+	@Column(name="id")
 	private Long userId;
 	private String gender;
-	private Integer age;
+	private String age;
 	private String relname;
 	private String nickname;
 	private String maritalStatus;
 	private String workplace;
-	private Integer height;
+	private String height;
 	private String education;
-	private Integer salary;
+	private String salary;
 	private String hashouse;
 	private String haskid;
 	public Long getUserId() {
@@ -63,22 +65,22 @@ public class UserInfo {
 		this.education = education;
 	}
 	
-	public Integer getAge() {
+	public String getAge() {
 		return age;
 	}
-	public void setAge(Integer age) {
+	public void setAge(String age) {
 		this.age = age;
 	}
-	public Integer getHeight() {
+	public String getHeight() {
 		return height;
 	}
-	public void setHeight(Integer height) {
+	public void setHeight(String height) {
 		this.height = height;
 	}
-	public Integer getSalary() {
+	public String getSalary() {
 		return salary;
 	}
-	public void setSalary(Integer salary) {
+	public void setSalary(String salary) {
 		this.salary = salary;
 	}
 	public String getHashouse() {

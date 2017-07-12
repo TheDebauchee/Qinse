@@ -1,19 +1,10 @@
-<<<<<<< HEAD
-D:\qsns\Qinse\qs-manage\qs-manage-mapper\src\main\java\com\qs\manage\mapper\UserDetailMapper.java
-D:\qsns\Qinse\qs-manage\qs-manage-mapper\src\main\java\com\qs\manage\mapper\UserPhotoMapper.java
-D:\qsns\Qinse\qs-manage\qs-manage-mapper\src\main\java\com\qs\manage\mapper\UserTagMapper.java
-D:\qsns\Qinse\qs-manage\qs-manage-mapper\src\main\java\com\qs\manage\mapper\UserValuesMapper.java
-D:\qsns\Qinse\qs-manage\qs-manage-mapper\src\main\java\com\qs\manage\mapper\UserInfoMapper.java
-D:\qsns\Qinse\qs-manage\qs-manage-mapper\src\main\java\com\qs\manage\mapper\UserStatusMapper.java
-D:\qsns\Qinse\qs-manage\qs-manage-mapper\src\main\java\com\qs\manage\mapper\UserLikeMapper.java
-D:\qsns\Qinse\qs-manage\qs-manage-mapper\src\main\java\com\qs\manage\mapper\UserMapper.java
-=======
+D:\JT\Qinse\qs-manage\qs-manage-mapper\src\main\java\com\qs\manage\mapper\UserSpouseMapper.java
 D:\JT\Qinse\qs-manage\qs-manage-mapper\src\main\java\com\qs\manage\mapper\UserStatusMapper.java
 D:\JT\Qinse\qs-manage\qs-manage-mapper\src\main\java\com\qs\manage\mapper\UserDetailMapper.java
 D:\JT\Qinse\qs-manage\qs-manage-mapper\src\main\java\com\qs\manage\mapper\UserMapper.java
 D:\JT\Qinse\qs-manage\qs-manage-mapper\src\main\java\com\qs\manage\mapper\UserInfoMapper.java
-D:\JT\Qinse\qs-manage\qs-manage-mapper\src\main\java\com\qs\manage\mapper\UserPhotoMapper.java
 D:\JT\Qinse\qs-manage\qs-manage-mapper\src\main\java\com\qs\manage\mapper\UserLikeMapper.java
+D:\JT\Qinse\qs-manage\qs-manage-mapper\src\main\java\com\qs\manage\mapper\UserPhotoMapper.java
 D:\JT\Qinse\qs-manage\qs-manage-mapper\src\main\java\com\qs\manage\mapper\UserTagMapper.java
 D:\JT\Qinse\qs-manage\qs-manage-mapper\src\main\java\com\qs\manage\mapper\UserValuesMapper.java
->>>>>>> 06d5c4b908b91f7c710c3b324b4901ace4bf71d7
+D:\JT\Qinse\qs-manage\qs-manage-mapper\src\main\java\com\qs\manage\mapper\UserLabelMapper.java

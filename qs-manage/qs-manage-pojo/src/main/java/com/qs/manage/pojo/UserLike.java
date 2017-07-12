@@ -1,24 +1,25 @@
 package com.qs.manage.pojo;
 
+import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Table(name="user_like")
+@Table(name="user_hobbies")
 public class UserLike {
 	@Id
+	@Column(name="id")
 	private Long userId;
-	private String like;
+	private String hobbies;
 	public Long getUserId() {
 		return userId;
 	}
 	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
-	public String getLike() {
-		return like;
+	public String getHobbies() {
+		return hobbies;
 	}
-	public void setLike(String like) {
-		this.like = like;
+	public void setHobbies(String hobbies) {
+		this.hobbies = hobbies;
 	}
-	
 }

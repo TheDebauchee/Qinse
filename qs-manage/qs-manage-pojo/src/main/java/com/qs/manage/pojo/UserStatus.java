@@ -1,11 +1,13 @@
 package com.qs.manage.pojo;
 
+import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Table(name="user_status")
 public class UserStatus {
 	@Id
+	@Column(name="id")
 	private Long userId;
 	private String occupation;	//用户的职业
 	private String firm;	//用户的公司

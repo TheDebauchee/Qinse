@@ -9,7 +9,7 @@
 	    
        <tr>
 	           性别:<input type="hidden" name="userId" style="width: 280px"/>
-	    <input type="text" name="username" style="width: 280px" value="${info.sGender}"></input>
+	    <input type="text" name="sGender" style="width: 280px" value="${info.sGender}"></input>
         </tr>
         <tr>
         年龄:<select name="sMinAge" >
@@ -122,26 +122,11 @@
         </select>
         </tr>
          <tr>
-	            工作地点:<select name="sWorkplace">
-	            <option selected="selected">不限</option>
-	            <option>北京</option>
-	            <option>上海</option>
-	            <option>广州</option>
-	            <option>深圳</option>
-	            <option>重庆</option>
-	            <option>天津</option>
-	            </select>
+	           	工作地点:<input type="text" name="sWorkplace">
         </tr>
         <tr>
-	            籍贯:<select name="sHomeLoc">
-	            <option selected="selected">不限</option>
-	            <option>北京</option>
-	            <option>上海</option>
-	            <option>广州</option>
-	            <option>深圳</option>
-	            <option>重庆</option>
-	            <option>天津</option>
-	            </select>
+	            籍贯:<input type="text" name="sHomeLoc">
+	            
         </tr>
         <tr>
 	            婚姻状况:<select name="sMaritalStatus">

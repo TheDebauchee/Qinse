@@ -2,7 +2,6 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<<<<<<< HEAD
 <mapper namespace="com.qs.manage.mapper.userMapper">
 
 <select id="">
@@ -10,10 +9,8 @@
 	(SELECT user_info.gender,user_info.education,user_info.salary,user_info.height,user_info.age,user_photo.pic1 FROM user_info LEFT JOIN user_photo ON user_info.id=user_photo.id and user_photo.pic1!='无图片') a 
 	where a.pic1 is not NULL and a.gender='女' and a.height='173' and a.age='32' LIMIT 1
 </select>
-=======
 <mapper namespace="com.qs.manage.mapper.UserMapper">
 
->>>>>>> 55fe2add37c3e460eaf450d54883c729800bc8d8
 
 
 </mapper>

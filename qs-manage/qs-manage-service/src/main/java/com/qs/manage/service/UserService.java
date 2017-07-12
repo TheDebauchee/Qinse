@@ -13,12 +13,9 @@ import com.qs.common.service.BaseService;
 import com.qs.manage.mapper.UserMapper;
 import com.qs.manage.pojo.BigUser;
 import com.qs.manage.pojo.User;
-<<<<<<< HEAD
-=======
 
 import qs.manage.pojo.SelectedMember;
 import qs.manage.pojo.SelectedMemberInfo;
->>>>>>> 55fe2add37c3e460eaf450d54883c729800bc8d8
 import com.qs.manage.pojo.UserInfo;
 
 import qs.manage.pojo.SelectedMember;
@@ -160,11 +157,6 @@ public class UserService extends BaseService<User>{
 	public List<SelectedMember> findSelectedMember() {
 		return userMapper.findSelectedMember();
 	}
-<<<<<<< HEAD
-
-=======
-	
->>>>>>> 55fe2add37c3e460eaf450d54883c729800bc8d8
 	public void sayHi(Long myId, Long userId) {
 		UserGreet ug=new UserGreet();
 		String hi="你好，很高兴认识你。 看了你的资料和照片很想跟你做个朋友";
@@ -183,9 +175,5 @@ public class UserService extends BaseService<User>{
 	}
 
 	
-<<<<<<< HEAD
-=======
-
 	
->>>>>>> 55fe2add37c3e460eaf450d54883c729800bc8d8
 }
